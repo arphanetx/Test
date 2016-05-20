@@ -1,0 +1,2517 @@
+==========================Pre Requisites ===============================================================
+
+fbctf@fbctf:~$ sudo add-apt-repository "deb http://dl.hhvm.com/ubuntu $(lsb_release -sc) main"
+[sudo] password for fbctf: 
+fbctf@fbctf:~$ sudo apt-
+apt-add-repository    apt-cache             apt-cdrom             apt-config            apt-extracttemplates  apt-ftparchive        apt-get               apt-key               apt-mark              apt-sortpkgs
+fbctf@fbctf:~$ sudo apt-get update 
+Hit:1 http://mx.archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]                                           
+Ign:3 http://dl.hhvm.com/ubuntu xenial InRelease                                
+Get:4 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]    
+Ign:5 http://dl.hhvm.com/ubuntu xenial Release                                              
+Ign:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                  
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                            
+Get:8 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages  
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Err:6 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Err:7 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Fetched 281 kB in 5s (48.2 kB/s)
+Reading package lists... Done
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+fbctf@fbctf:~$ sudo apt-get install hhvm
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libboost-context1.58.0 libboost-program-options1.58.0 libboost-thread1.58.0 libc-client2007e libgflags2v5 libgoogle-glog0v5 libjemalloc1 libmcrypt4 libmemcached11 libmysqlclient20 libodbc1 libonig2 libzip4 mlock mysql-common
+Suggested packages:
+  uw-mailutils libmcrypt-dev mcrypt libmyodbc odbc-postgresql tdsodbc unixodbc-bin
+The following NEW packages will be installed:
+  hhvm libboost-context1.58.0 libboost-program-options1.58.0 libboost-thread1.58.0 libc-client2007e libgflags2v5 libgoogle-glog0v5 libjemalloc1 libmcrypt4 libmemcached11 libmysqlclient20 libodbc1 libonig2 libzip4 mlock mysql-common
+0 upgraded, 16 newly installed, 0 to remove and 81 not upgraded.
+Need to get 13.1 MB of archives.
+After this operation, 58.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libonig2 amd64 5.9.6-1 [88.1 kB]
+Get:2 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libboost-thread1.58.0 amd64 1.58.0+dfsg-5ubuntu3 [47.0 kB]
+Get:3 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libboost-context1.58.0 amd64 1.58.0+dfsg-5ubuntu3 [18.8 kB]
+Get:4 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libboost-program-options1.58.0 amd64 1.58.0+dfsg-5ubuntu3 [138 kB]
+Get:5 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 mlock amd64 8:2007f~dfsg-4 [12.0 kB]
+Get:6 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libc-client2007e amd64 8:2007f~dfsg-4 [577 kB]
+Get:7 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libgflags2v5 amd64 2.1.2-3 [54.4 kB]
+Get:8 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libgoogle-glog0v5 amd64 0.3.4-0.1 [49.3 kB]
+Get:9 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libjemalloc1 amd64 3.6.0-9ubuntu1 [78.9 kB]
+Get:10 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libmcrypt4 amd64 2.5.8-3.3 [63.0 kB]
+Get:11 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libmemcached11 amd64 1.0.18-4.1 [82.7 kB]
+Get:12 http://mx.archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-common all 5.7.12-0ubuntu1 [17.0 kB]
+Get:13 http://mx.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmysqlclient20 amd64 5.7.12-0ubuntu1 [810 kB]
+Get:14 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libodbc1 amd64 2.3.1-4.1 [180 kB]
+Get:15 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libzip4 amd64 1.0.1-0ubuntu1 [36.3 kB]
+Get:16 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 hhvm amd64 3.11.1+dfsg-1ubuntu1 [10.9 MB]
+Fetched 13.1 MB in 5s (2,523 kB/s)
+Selecting previously unselected package libonig2:amd64.
+(Reading database ... 176056 files and directories currently installed.)
+Preparing to unpack .../libonig2_5.9.6-1_amd64.deb ...
+Unpacking libonig2:amd64 (5.9.6-1) ...
+Selecting previously unselected package libboost-thread1.58.0:amd64.
+Preparing to unpack .../libboost-thread1.58.0_1.58.0+dfsg-5ubuntu3_amd64.deb ...
+Unpacking libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Selecting previously unselected package libboost-context1.58.0:amd64.
+Preparing to unpack .../libboost-context1.58.0_1.58.0+dfsg-5ubuntu3_amd64.deb ...
+Unpacking libboost-context1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Selecting previously unselected package libboost-program-options1.58.0:amd64.
+Preparing to unpack .../libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3_amd64.deb ...
+Unpacking libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Selecting previously unselected package mlock.
+Preparing to unpack .../mlock_8%3a2007f~dfsg-4_amd64.deb ...
+Unpacking mlock (8:2007f~dfsg-4) ...
+Selecting previously unselected package libc-client2007e.
+Preparing to unpack .../libc-client2007e_8%3a2007f~dfsg-4_amd64.deb ...
+Unpacking libc-client2007e (8:2007f~dfsg-4) ...
+Selecting previously unselected package libgflags2v5.
+Preparing to unpack .../libgflags2v5_2.1.2-3_amd64.deb ...
+Unpacking libgflags2v5 (2.1.2-3) ...
+Selecting previously unselected package libgoogle-glog0v5.
+Preparing to unpack .../libgoogle-glog0v5_0.3.4-0.1_amd64.deb ...
+Unpacking libgoogle-glog0v5 (0.3.4-0.1) ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../libjemalloc1_3.6.0-9ubuntu1_amd64.deb ...
+Unpacking libjemalloc1 (3.6.0-9ubuntu1) ...
+Selecting previously unselected package libmcrypt4.
+Preparing to unpack .../libmcrypt4_2.5.8-3.3_amd64.deb ...
+Unpacking libmcrypt4 (2.5.8-3.3) ...
+Selecting previously unselected package libmemcached11:amd64.
+Preparing to unpack .../libmemcached11_1.0.18-4.1_amd64.deb ...
+Unpacking libmemcached11:amd64 (1.0.18-4.1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../mysql-common_5.7.12-0ubuntu1_all.deb ...
+Unpacking mysql-common (5.7.12-0ubuntu1) ...
+Selecting previously unselected package libmysqlclient20:amd64.
+Preparing to unpack .../libmysqlclient20_5.7.12-0ubuntu1_amd64.deb ...
+Unpacking libmysqlclient20:amd64 (5.7.12-0ubuntu1) ...
+Selecting previously unselected package libodbc1:amd64.
+Preparing to unpack .../libodbc1_2.3.1-4.1_amd64.deb ...
+Unpacking libodbc1:amd64 (2.3.1-4.1) ...
+Selecting previously unselected package libzip4:amd64.
+Preparing to unpack .../libzip4_1.0.1-0ubuntu1_amd64.deb ...
+Unpacking libzip4:amd64 (1.0.1-0ubuntu1) ...
+Selecting previously unselected package hhvm.
+Preparing to unpack .../hhvm_3.11.1+dfsg-1ubuntu1_amd64.deb ...
+Unpacking hhvm (3.11.1+dfsg-1ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu4) ...
+Setting up libonig2:amd64 (5.9.6-1) ...
+Setting up libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Setting up libboost-context1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Setting up libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3) ...
+Setting up mlock (8:2007f~dfsg-4) ...
+Setting up libc-client2007e (8:2007f~dfsg-4) ...
+Setting up libgflags2v5 (2.1.2-3) ...
+Setting up libgoogle-glog0v5 (0.3.4-0.1) ...
+Setting up libjemalloc1 (3.6.0-9ubuntu1) ...
+Setting up libmcrypt4 (2.5.8-3.3) ...
+Setting up libmemcached11:amd64 (1.0.18-4.1) ...
+Setting up mysql-common (5.7.12-0ubuntu1) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libmysqlclient20:amd64 (5.7.12-0ubuntu1) ...
+Setting up libodbc1:amd64 (2.3.1-4.1) ...
+Setting up libzip4:amd64 (1.0.1-0ubuntu1) ...
+Setting up hhvm (3.11.1+dfsg-1ubuntu1) ...
+update-alternatives: using /usr/bin/hhvm to provide /usr/bin/php (php) in auto mode
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu4) ...
+fbctf@fbctf:~$ sudo update-rc.d hhvm defaults
+fbctf@fbctf:~$ sudo add-apt-repository ppa:avsm/ppa
+ Latest stable versions of OCaml and OPAM.
+ More info: https://launchpad.net/~avsm/+archive/ubuntu/ppa
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmpv6je1c66/secring.gpg' created
+gpg: keyring `/tmp/tmpv6je1c66/pubring.gpg' created
+gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpv6je1c66/trustdb.gpg: trustdb created
+gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+fbctf@fbctf:~$ sudo apt-get update
+Ign:1 http://dl.hhvm.com/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
+Hit:3 http://mx.archive.ubuntu.com/ubuntu xenial InRelease                                            
+Ign:4 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial InRelease                                                                 
+Ign:5 http://dl.hhvm.com/ubuntu xenial Release                                                        
+Get:6 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]    
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                                        
+Ign:8 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release                                                     
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                                                  
+Ign:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages                                 
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages                                                  
+Ign:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages       
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US                  
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                       
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en         
+Get:16 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US    
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Err:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Ign:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Err:9 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:11 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:13 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:15 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Err:10 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Err:12 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages                                                                                                                                                                 
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:14 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                                                                                                                                                                  
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                                                                                                                                                             
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en                                                                                                                                                                
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata                                                                                                                                                         
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons                                                                                                                                                            
+Fetched 281 kB in 6s (40.6 kB/s)                                                                                                                                                                                                          
+Reading package lists... Done
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+fbctf@fbctf:~$ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0x5a16e7281be7a449
+Executing: /tmp/tmp.6yqHBQQbQx/gpg.1.sh --recv-keys
+--keyserver
+hkp://keyserver.ubuntu.com:80
+0x5a16e7281be7a449
+gpg: requesting key 1BE7A449 from hkp server keyserver.ubuntu.com
+gpg: key 1BE7A449: public key "Paul Tarjan <pt@fb.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+fbctf@fbctf:~$ sudo add-apt-repository "deb http://dl.hhvm.com/ubuntu $(lsb_release -sc) main"
+fbctf@fbctf:~$ sudo apt-get update 
+Ign:1 http://dl.hhvm.com/ubuntu xenial InRelease
+Ign:2 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial InRelease     
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
+Hit:4 http://mx.archive.ubuntu.com/ubuntu xenial InRelease                                            
+Ign:5 http://dl.hhvm.com/ubuntu xenial Release                                                                                  
+Ign:6 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release                                         
+Get:7 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]    
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                                        
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages                                         
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                                                 
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages                                  
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages                       
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                       
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US      
+Get:15 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Err:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Err:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Err:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Err:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                                                                                                                                                                  
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                                                                                                                                                             
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en                                                                                                                                                                
+Ign:21 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata                                                                                                                                                         
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons                                                                                                                                                            
+Fetched 281 kB in 6s (41.4 kB/s)                                                                                                                                                                                                          
+Reading package lists... Done
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+fbctf@fbctf:~$ sudo update-rc.d hhvm defaults
+fbctf@fbctf:~$ sudo add-apt-repository ppa:avsm/ppa
+ Latest stable versions of OCaml and OPAM.
+ More info: https://launchpad.net/~avsm/+archive/ubuntu/ppa
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmpsjjrtj31/secring.gpg' created
+gpg: keyring `/tmp/tmpsjjrtj31/pubring.gpg' created
+gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpsjjrtj31/trustdb.gpg: trustdb created
+gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+fbctf@fbctf:~$ sudo apt-get update 
+Ign:1 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
+Ign:3 http://dl.hhvm.com/ubuntu xenial InRelease                                                      
+Hit:4 http://mx.archive.ubuntu.com/ubuntu xenial InRelease                                            
+Ign:5 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release                                                                   
+Ign:6 http://dl.hhvm.com/ubuntu xenial Release                                                        
+Get:7 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]    
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                                        
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages                                         
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                                                 
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages                                  
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages                       
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                       
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US                                 
+Get:15 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US     
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en               
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons           
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Err:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Err:10 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:17 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:19 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Err:9 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Err:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages                                                                                                                                                                 
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:13 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                                                                                                                                                                  
+Ign:16 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                                                                                                                                                             
+Ign:18 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en                                                                                                                                                                
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata                                                                                                                                                         
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons                                                                                                                                                            
+Fetched 281 kB in 6s (40.6 kB/s)                                                                                                                                                                                                          
+Reading package lists... Done
+W: The repository 'http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+fbctf@fbctf:~$ sudo apt-get install ocaml ocaml-native-compilers camlp4-extra opam
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'camlp4' instead of 'camlp4-extra'
+The following additional packages will be installed:
+  aspcud clasp darcs git git-man gringo javascript-common ledit libcamlp4-ocaml-dev liberror-perl libfindlib-ocaml libfindlib-ocaml-dev libjs-excanvas libncurses5-dev libpthread-stubs0-dev libtinfo-dev libx11-dev libx11-doc
+  libxau-dev libxcb1-dev libxdmcp-dev mercurial mercurial-common ocaml-base ocaml-base-nox ocaml-compiler-libs ocaml-findlib ocaml-interp ocaml-nox opam-docs x11proto-core-dev x11proto-input-dev x11proto-kb-dev xorg-sgml-doctools
+  xtrans-dev
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn ncurses-doc libxcb-doc qct kdiff3 | kdiff3-qt | kompare | meld | tkcvs | mgdiff python-mysqldb python-pygments
+  python-openssl ocaml-doc tuareg-mode | ocaml-mode
+The following NEW packages will be installed:
+  aspcud camlp4 clasp darcs git git-man gringo javascript-common ledit libcamlp4-ocaml-dev liberror-perl libfindlib-ocaml libfindlib-ocaml-dev libjs-excanvas libncurses5-dev libpthread-stubs0-dev libtinfo-dev libx11-dev libx11-doc
+  libxau-dev libxcb1-dev libxdmcp-dev mercurial mercurial-common ocaml ocaml-base ocaml-base-nox ocaml-compiler-libs ocaml-findlib ocaml-interp ocaml-native-compilers ocaml-nox opam opam-docs x11proto-core-dev x11proto-input-dev
+  x11proto-kb-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 39 newly installed, 0 to remove and 81 not upgraded.
+Need to get 51.3 MB of archives.
+After this operation, 330 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-base-nox amd64 4.02.3-5ubuntu2 [456 kB]
+Get:2 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libtinfo-dev amd64 6.0+20160213-1ubuntu1 [77.4 kB]
+Get:3 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libncurses5-dev amd64 6.0+20160213-1ubuntu1 [175 kB]
+Get:4 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-compiler-libs amd64 4.02.3-5ubuntu2 [9,510 kB]
+Get:5 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-interp amd64 4.02.3-5ubuntu2 [271 kB]
+Get:6 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-nox amd64 4.02.3-5ubuntu2 [6,271 kB]
+Get:7 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libcamlp4-ocaml-dev amd64 4.02.1+3-2 [12.2 MB]                                                                                                                            
+Get:8 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 camlp4 amd64 4.02.1+3-2 [3,388 kB]                                                                                                                                        
+Get:9 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 darcs amd64 2.10.2-1 [3,096 kB]                                                                                                                                           
+Get:10 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 liberror-perl all 0.17-1.2 [19.6 kB]                                                                                                                                         
+Get:11 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 git-man all 1:2.7.4-0ubuntu1 [735 kB]                                                                                                                                        
+Get:12 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 git amd64 1:2.7.4-0ubuntu1 [3,006 kB]                                                                                                                                        
+Get:13 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 gringo amd64 4.5.4-1 [1,833 kB]                                                                                                                                          
+Get:14 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 javascript-common all 11 [6,066 B]                                                                                                                                           
+Get:15 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ledit all 2.03-4build1 [42.5 kB]                                                                                                                                         
+Get:16 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libfindlib-ocaml amd64 1.5.5-2build1 [137 kB]                                                                                                                            
+Get:17 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libfindlib-ocaml-dev amd64 1.5.5-2build1 [113 kB]                                                                                                                        
+Get:18 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 libjs-excanvas all 0.r3-4 [45.2 kB]                                                                                                                                      
+Get:19 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libpthread-stubs0-dev amd64 0.3-4 [4,068 B]                                                                                                                                  
+Get:20 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]                                                                                                                                    
+Get:21 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-core-dev all 7.0.28-2ubuntu1 [254 kB]                                                                                                                               
+Get:22 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libxau-dev amd64 1:1.0.8-1 [11.1 kB]                                                                                                                                         
+Get:23 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libxdmcp-dev amd64 1:1.1.2-1.1 [25.1 kB]                                                                                                                                     
+Get:24 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-input-dev all 2.3.1-1 [118 kB]                                                                                                                                      
+Get:25 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 x11proto-kb-dev all 1.0.7-0ubuntu1 [224 kB]                                                                                                                                  
+Get:26 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 xtrans-dev all 1.3.5-1 [70.5 kB]                                                                                                                                             
+Get:27 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb1-dev amd64 1.11.1-1ubuntu1 [74.2 kB]                                                                                                                                  
+Get:28 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libx11-dev amd64 2:1.6.3-1ubuntu2 [642 kB]                                                                                                                                   
+Get:29 http://mx.archive.ubuntu.com/ubuntu xenial/main amd64 libx11-doc all 2:1.6.3-1ubuntu2 [1,465 kB]                                                                                                                                   
+Get:30 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 mercurial-common all 3.7.3-1ubuntu1 [1,833 kB]                                                                                                                           
+Get:31 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 mercurial amd64 3.7.3-1ubuntu1 [46.3 kB]                                                                                                                                 
+Get:32 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-base amd64 4.02.3-5ubuntu2 [44.2 kB]                                                                                                                               
+Get:33 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml amd64 4.02.3-5ubuntu2 [31.8 kB]                                                                                                                                    
+Get:34 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-findlib amd64 1.5.5-2build1 [262 kB]                                                                                                                               
+Get:35 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 ocaml-native-compilers amd64 4.02.3-5ubuntu2 [2,487 kB]                                                                                                                  
+Get:36 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 opam-docs all 1.2.2-4 [310 kB]                                                                                                                                           
+Get:37 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 opam amd64 1.2.2-4 [1,447 kB]                                                                                                                                            
+Get:38 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 clasp amd64 3.1.4-1 [451 kB]                                                                                                                                             
+Get:39 http://mx.archive.ubuntu.com/ubuntu xenial/universe amd64 aspcud amd64 1:1.9.1-2 [146 kB]                                                                                                                                          
+Fetched 51.3 MB in 20s (2,519 kB/s)                                                                                                                                                                                                       
+Extracting templates from packages: 100%
+Selecting previously unselected package ocaml-base-nox.
+(Reading database ... 176196 files and directories currently installed.)
+Preparing to unpack .../ocaml-base-nox_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-base-nox (4.02.3-5ubuntu2) ...
+Selecting previously unselected package libtinfo-dev:amd64.
+Preparing to unpack .../libtinfo-dev_6.0+20160213-1ubuntu1_amd64.deb ...
+Unpacking libtinfo-dev:amd64 (6.0+20160213-1ubuntu1) ...
+Selecting previously unselected package libncurses5-dev:amd64.
+Preparing to unpack .../libncurses5-dev_6.0+20160213-1ubuntu1_amd64.deb ...
+Unpacking libncurses5-dev:amd64 (6.0+20160213-1ubuntu1) ...
+Selecting previously unselected package ocaml-compiler-libs.
+Preparing to unpack .../ocaml-compiler-libs_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-compiler-libs (4.02.3-5ubuntu2) ...
+Selecting previously unselected package ocaml-interp.
+Preparing to unpack .../ocaml-interp_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-interp (4.02.3-5ubuntu2) ...
+Selecting previously unselected package ocaml-nox.
+Preparing to unpack .../ocaml-nox_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-nox (4.02.3-5ubuntu2) ...
+Selecting previously unselected package libcamlp4-ocaml-dev.
+Preparing to unpack .../libcamlp4-ocaml-dev_4.02.1+3-2_amd64.deb ...
+Unpacking libcamlp4-ocaml-dev (4.02.1+3-2) ...
+Selecting previously unselected package camlp4.
+Preparing to unpack .../camlp4_4.02.1+3-2_amd64.deb ...
+Unpacking camlp4 (4.02.1+3-2) ...
+Selecting previously unselected package darcs.
+Preparing to unpack .../darcs_2.10.2-1_amd64.deb ...
+Unpacking darcs (2.10.2-1) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../liberror-perl_0.17-1.2_all.deb ...
+Unpacking liberror-perl (0.17-1.2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.7.4-0ubuntu1_all.deb ...
+Unpacking git-man (1:2.7.4-0ubuntu1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.7.4-0ubuntu1_amd64.deb ...
+Unpacking git (1:2.7.4-0ubuntu1) ...
+Selecting previously unselected package gringo.
+Preparing to unpack .../gringo_4.5.4-1_amd64.deb ...
+Unpacking gringo (4.5.4-1) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package ledit.
+Preparing to unpack .../ledit_2.03-4build1_all.deb ...
+Unpacking ledit (2.03-4build1) ...
+Selecting previously unselected package libfindlib-ocaml.
+Preparing to unpack .../libfindlib-ocaml_1.5.5-2build1_amd64.deb ...
+Unpacking libfindlib-ocaml (1.5.5-2build1) ...
+Selecting previously unselected package libfindlib-ocaml-dev.
+Preparing to unpack .../libfindlib-ocaml-dev_1.5.5-2build1_amd64.deb ...
+Unpacking libfindlib-ocaml-dev (1.5.5-2build1) ...
+Selecting previously unselected package libjs-excanvas.
+Preparing to unpack .../libjs-excanvas_0.r3-4_all.deb ...
+Unpacking libjs-excanvas (0.r3-4) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../libpthread-stubs0-dev_0.3-4_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.3-4) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../x11proto-core-dev_7.0.28-2ubuntu1_all.deb ...
+Unpacking x11proto-core-dev (7.0.28-2ubuntu1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../libxau-dev_1%3a1.0.8-1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.8-1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../libxdmcp-dev_1%3a1.1.2-1.1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.2-1.1) ...
+Selecting previously unselected package x11proto-input-dev.
+Preparing to unpack .../x11proto-input-dev_2.3.1-1_all.deb ...
+Unpacking x11proto-input-dev (2.3.1-1) ...
+Selecting previously unselected package x11proto-kb-dev.
+Preparing to unpack .../x11proto-kb-dev_1.0.7-0ubuntu1_all.deb ...
+Unpacking x11proto-kb-dev (1.0.7-0ubuntu1) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../xtrans-dev_1.3.5-1_all.deb ...
+Unpacking xtrans-dev (1.3.5-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../libxcb1-dev_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../libx11-dev_2%3a1.6.3-1ubuntu2_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.3-1ubuntu2) ...
+Selecting previously unselected package libx11-doc.
+Preparing to unpack .../libx11-doc_2%3a1.6.3-1ubuntu2_all.deb ...
+Unpacking libx11-doc (2:1.6.3-1ubuntu2) ...
+Selecting previously unselected package mercurial-common.
+Preparing to unpack .../mercurial-common_3.7.3-1ubuntu1_all.deb ...
+Unpacking mercurial-common (3.7.3-1ubuntu1) ...
+Selecting previously unselected package mercurial.
+Preparing to unpack .../mercurial_3.7.3-1ubuntu1_amd64.deb ...
+Unpacking mercurial (3.7.3-1ubuntu1) ...
+Selecting previously unselected package ocaml-base.
+Preparing to unpack .../ocaml-base_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-base (4.02.3-5ubuntu2) ...
+Selecting previously unselected package ocaml.
+Preparing to unpack .../ocaml_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml (4.02.3-5ubuntu2) ...
+Selecting previously unselected package ocaml-findlib.
+Preparing to unpack .../ocaml-findlib_1.5.5-2build1_amd64.deb ...
+Unpacking ocaml-findlib (1.5.5-2build1) ...
+Selecting previously unselected package ocaml-native-compilers.
+Preparing to unpack .../ocaml-native-compilers_4.02.3-5ubuntu2_amd64.deb ...
+Unpacking ocaml-native-compilers (4.02.3-5ubuntu2) ...
+Selecting previously unselected package opam-docs.
+Preparing to unpack .../opam-docs_1.2.2-4_all.deb ...
+Unpacking opam-docs (1.2.2-4) ...
+Selecting previously unselected package opam.
+Preparing to unpack .../opam_1.2.2-4_amd64.deb ...
+Unpacking opam (1.2.2-4) ...
+Selecting previously unselected package clasp.
+Preparing to unpack .../clasp_3.1.4-1_amd64.deb ...
+Unpacking clasp (3.1.4-1) ...
+Selecting previously unselected package aspcud.
+Preparing to unpack .../aspcud_1%3a1.9.1-2_amd64.deb ...
+Unpacking aspcud (1:1.9.1-2) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 3 added doc-base files...
+Setting up ocaml-base-nox (4.02.3-5ubuntu2) ...
+Setting up libtinfo-dev:amd64 (6.0+20160213-1ubuntu1) ...
+Setting up libncurses5-dev:amd64 (6.0+20160213-1ubuntu1) ...
+Setting up darcs (2.10.2-1) ...
+Setting up liberror-perl (0.17-1.2) ...
+Setting up git-man (1:2.7.4-0ubuntu1) ...
+Setting up git (1:2.7.4-0ubuntu1) ...
+Setting up gringo (4.5.4-1) ...
+Setting up javascript-common (11) ...
+Setting up ledit (2.03-4build1) ...
+update-alternatives: using /usr/bin/ledit to provide /usr/bin/readline-editor (readline-editor) in auto mode
+Setting up libfindlib-ocaml (1.5.5-2build1) ...
+Setting up libjs-excanvas (0.r3-4) ...
+Setting up libpthread-stubs0-dev:amd64 (0.3-4) ...
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Setting up x11proto-core-dev (7.0.28-2ubuntu1) ...
+Setting up libxau-dev:amd64 (1:1.0.8-1) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.2-1.1) ...
+Setting up x11proto-input-dev (2.3.1-1) ...
+Setting up x11proto-kb-dev (1.0.7-0ubuntu1) ...
+Setting up xtrans-dev (1.3.5-1) ...
+Setting up libxcb1-dev:amd64 (1.11.1-1ubuntu1) ...
+Setting up libx11-dev:amd64 (2:1.6.3-1ubuntu2) ...
+Setting up libx11-doc (2:1.6.3-1ubuntu2) ...
+Setting up mercurial-common (3.7.3-1ubuntu1) ...
+Setting up mercurial (3.7.3-1ubuntu1) ...
+
+Creating config file /etc/mercurial/hgrc.d/hgext.rc with new version
+Setting up ocaml-base (4.02.3-5ubuntu2) ...
+Setting up ocaml-findlib (1.5.5-2build1) ...
+Setting up opam-docs (1.2.2-4) ...
+Setting up opam (1.2.2-4) ...
+Setting up clasp (3.1.4-1) ...
+Setting up aspcud (1:1.9.1-2) ...
+Setting up ocaml-compiler-libs (4.02.3-5ubuntu2) ...
+Setting up ocaml-interp (4.02.3-5ubuntu2) ...
+Setting up ocaml-nox (4.02.3-5ubuntu2) ...
+Setting up libcamlp4-ocaml-dev (4.02.1+3-2) ...
+Setting up camlp4 (4.02.1+3-2) ...
+Setting up libfindlib-ocaml-dev (1.5.5-2build1) ...
+Setting up ocaml (4.02.3-5ubuntu2) ...
+Setting up ocaml-native-compilers (4.02.3-5ubuntu2) ...
+fbctf@fbctf:~$ sudo opam init
+[WARNING] Running as root is not recommended
+Checking for available remotes: rsync and local, git, mercurial, darcs. Perfect!
+[WARNING] Recommended dependencies -- most packages rely on these:
+            - m4
+
+
+=-=- Fetching repository information =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[default] synchronized from https://opam.ocaml.org
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+∗  installed base-bigarray.base
+∗  installed base-threads.base
+∗  installed base-unix.base
+Done.
+
+In normal operation, OPAM only alters files within ~/.opam.
+
+During this initialisation, you can allow OPAM to add information to two
+other files for best results. You can also make these additions manually
+if you wish.
+
+If you agree, OPAM will modify:
+
+  - ~/.profile (or a file you specify) to set the right environment
+    variables and to load the auto-completion scripts for your shell (bash)
+    on startup. Specifically, it checks for and appends the following line:
+
+    . /home/fbctf/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+
+  - ~/.ocamlinit to ensure that non-system installations of `ocamlfind`
+    (i.e. those installed by OPAM) will work correctly when running the
+    OCaml toplevel. It does this by adding $OCAML_TOPLEVEL_PATH to the list
+    of include directories.
+
+If you choose to not configure your system now, you can either configure
+OPAM manually (instructions will be displayed) or launch the automatic setup
+later by running:
+
+   opam config setup -a
+
+
+Do you want OPAM to modify ~/.profile and ~/.ocamlinit?
+(default is 'no', use 'f' to name a file other than ~/.profile)
+    [N/y/f] y
+
+User configuration:
+  Generating ~/.ocamlinit.
+  Updating ~/.profile.
+Global configuration:
+  Updating ~/.opam/opam-init/init.sh
+  Updating ~/.opam/opam-init/init.zsh
+  Updating ~/.opam/opam-init/init.csh
+  Updating ~/.opam/opam-init/init.fish
+# To setup the new switch in the current shell, you need to run:
+eval `opam config env`
+fbctf@fbctf:~$ sudo opam depext conf-pkg-config.1.0
+OPAM plugin depext is not installed. Install it on the current switch? [Y/n] y
+The following actions will be performed:
+  ∗  install base-ocamlbuild base             [required by ocamlbuild]
+  ∗  install ocamlbuild      0                [required by cmdliner]
+  ∗  install cmdliner        0.9.8            [required by depext]
+  ∗  install depext          0.9.1
+===== ∗  4 =====
+Do you want to continue ? [Y/n] y
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[default] https://opam.ocaml.org/archives/depext.0.9.1+opam.tar.gz downloaded
+[default] https://opam.ocaml.org/archives/cmdliner.0.9.8+opam.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+∗  installed base-ocamlbuild.base
+∗  installed ocamlbuild.0
+∗  installed cmdliner.0.9.8
+∗  installed depext.0.9.1
+Done.
+
+=-=- Carrying on to "opam depext conf-pkg-config.1.0" -=-=-=-=-=-=-=-=-=-=-=-=-=
+
+# Detecting depexts using flags: x86_64 linux ubuntu
+# The following system packages are needed:
+#  - pkg-config
+# All required OS packages found.
+fbctf@fbctf:~$ sudo opam depext flowtype.0.22.1
+# Detecting depexts using flags: x86_64 linux ubuntu
+# The following system packages are needed:
+#  - libelf-dev
+#  - m4
+#  - ncurses-dev
+#  - pkg-config
+# The following new OS packages need to be installed: libelf-dev m4 ncurses-dev
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... 180600 files and directories currently installed.)
+Preparing to unpack .../libsigsegv2_2.10-4_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.10-4) ...
+Selecting previously unselected package libelf-dev:amd64.
+Preparing to unpack .../libelf-dev_0.165-3ubuntu1_amd64.deb ...
+Unpacking libelf-dev:amd64 (0.165-3ubuntu1) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../archives/m4_1.4.17-5_amd64.deb ...
+Unpacking m4 (1.4.17-5) ...
+Processing triggers for install-info (6.1.0.dfsg.1-5) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libsigsegv2:amd64 (2.10-4) ...
+Setting up libelf-dev:amd64 (0.165-3ubuntu1) ...
+Setting up m4 (1.4.17-5) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+# OS packages installation successful
+fbctf@fbctf:~$ sudo opam install flowtype
+[WARNING] Running as root is not recommended
+The following actions will be performed:
+  ∗  install conf-pkg-config 1.0              [required by conf-ncurses]
+  ∗  install conf-m4         1                [required by ocamlfind]
+  ∗  install conf-ncurses    1                [required by ocamlfind]
+  ∗  install ocamlfind       1.6.2            [required by base-bytes]
+  ∗  install base-bytes      base             [required by flowtype]
+  ∗  install flowtype        0.25.0
+===== ∗  6 =====
+Do you want to continue ? [Y/n] y
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[default] https://opam.ocaml.org/archives/ocamlfind.1.6.2+opam.tar.gz downloaded
+[default] https://opam.ocaml.org/archives/flowtype.0.25.0+opam.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+∗  installed conf-m4.1
+∗  installed conf-pkg-config.1.0
+∗  installed conf-ncurses.1
+∗  installed ocamlfind.1.6.2
+∗  installed base-bytes.base
+∗  installed flowtype.0.25.0
+Done.
+fbctf@fbctf:~$ eval 'opam config env'
+CAML_LD_LIBRARY_PATH="/home/fbctf/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs"; export CAML_LD_LIBRARY_PATH;
+MANPATH="/home/fbctf/.opam/system/man:"; export MANPATH;
+PERL5LIB="/home/fbctf/.opam/system/lib/perl5"; export PERL5LIB;
+OCAML_TOPLEVEL_PATH="/home/fbctf/.opam/system/lib/toplevel"; export OCAML_TOPLEVEL_PATH;
+PATH="/home/fbctf/.opam/system/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"; export PATH;
+fbctf@fbctf:~$ sudo opam init --comp=4.01.0
+[WARNING] Running as root is not recommended
+OPAM has already been initialized.
+In normal operation, OPAM only alters files within ~/.opam.
+
+During this initialisation, you can allow OPAM to add information to two
+other files for best results. You can also make these additions manually
+if you wish.
+
+If you agree, OPAM will modify:
+
+  - ~/.profile (or a file you specify) to set the right environment
+    variables and to load the auto-completion scripts for your shell (bash)
+    on startup. Specifically, it checks for and appends the following line:
+
+    . /home/fbctf/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+
+  - ~/.ocamlinit to ensure that non-system installations of `ocamlfind`
+    (i.e. those installed by OPAM) will work correctly when running the
+    OCaml toplevel. It does this by adding $OCAML_TOPLEVEL_PATH to the list
+    of include directories.
+
+If you choose to not configure your system now, you can either configure
+OPAM manually (instructions will be displayed) or launch the automatic setup
+later by running:
+
+   opam config setup -a
+
+
+Do you want OPAM to modify ~/.profile and ~/.ocamlinit?
+(default is 'no', use 'f' to name a file other than ~/.profile)
+    [N/y/f] y
+
+User configuration:
+  ~/.ocamlinit is already up-to-date.
+  ~/.profile is already up-to-date.
+Global configuration:
+  ~/.opam/opam-init/init.sh is already up-to-date.
+  ~/.opam/opam-init/init.zsh is already up-to-date.
+  ~/.opam/opam-init/init.csh is already up-to-date.
+  ~/.opam/opam-init/init.fish is already up-to-date.
+# To setup the new switch in the current shell, you need to run:
+eval `opam config env`
+fbctf@fbctf:~$ eval `opam config env`
+fbctf@fbctf:~$ eval 'opam config env'
+CAML_LD_LIBRARY_PATH="/home/fbctf/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs"; export CAML_LD_LIBRARY_PATH;
+MANPATH=":/home/fbctf/.opam/system/man"; export MANPATH;
+PERL5LIB="/home/fbctf/.opam/system/lib/perl5"; export PERL5LIB;
+OCAML_TOPLEVEL_PATH="/home/fbctf/.opam/system/lib/toplevel"; export OCAML_TOPLEVEL_PATH;
+PATH="/home/fbctf/.opam/system/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"; export PATH;
+fbctf@fbctf:~$ flow version
+Flow, a static type checker for JavaScript, version 0.25.0
+fbctf@fbctf:~$ cd /etc/nginx/
+fbctf@fbctf:/etc/nginx$ ls
+conf.d  fastcgi.conf  fastcgi_params  koi-utf  koi-win  mime.types  nginx.conf  proxy_params  scgi_params  sites-available  sites-enabled  snippets  uwsgi_params  win-utf
+fbctf@fbctf:/etc/nginx$ mkdir certs
+mkdir: cannot create directory ‘certs’: Permission denied
+fbctf@fbctf:/etc/nginx$ ls
+conf.d  fastcgi.conf  fastcgi_params  koi-utf  koi-win  mime.types  nginx.conf  proxy_params  scgi_params  sites-available  sites-enabled  snippets  uwsgi_params  win-utf
+fbctf@fbctf:/etc/nginx$ sudo mkdir certs
+fbctf@fbctf:/etc/nginx$ ls
+certs  conf.d  fastcgi.conf  fastcgi_params  koi-utf  koi-win  mime.types  nginx.conf  proxy_params  scgi_params  sites-available  sites-enabled  snippets  uwsgi_params  win-utf
+fbctf@fbctf:/etc/nginx$ cd certs/
+fbctf@fbctf:/etc/nginx/certs$ openssl genrsa -des3 -out self-ssl.key 2048
+self-ssl.key: Permission denied
+139911379674776:error:0200100D:system library:fopen:Permission denied:bss_file.c:398:fopen('self-ssl.key','w')
+139911379674776:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:400:
+fbctf@fbctf:/etc/nginx/certs$ sudo openssl genrsa -des3 -out self-ssl.key 2048
+Generating RSA private key, 2048 bit long modulus
+........................................................................................................+++
+..........................+++
+e is 65537 (0x10001)
+Enter pass phrase for self-ssl.key:
+Verifying - Enter pass phrase for self-ssl.key:
+fbctf@fbctf:/etc/nginx/certs$ sudo openssl req -new -key self-ssl.key -out self-ssl.csr
+Enter pass phrase for self-ssl.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:MX
+State or Province Name (full name) [Some-State]:CDMX
+Locality Name (eg, city) []:CDMX
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:fbctf
+Organizational Unit Name (eg, section) []:fbctf
+Common Name (e.g. server FQDN or YOUR name) []:fbctf
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+fbctf@fbctf:/etc/nginx/certs$ sudo cp -v self-ssl.{key,original}
+'self-ssl.key' -> 'self-ssl.original'
+fbctf@fbctf:/etc/nginx/certs$ sudo openssl rsa -in self-ssl.original -out self-ssl.key 
+Enter pass phrase for self-ssl.original:
+writing RSA key
+fbctf@fbctf:/etc/nginx/certs$ rm -v self-ssl.original 
+rm: remove write-protected regular file 'self-ssl.original'? n
+fbctf@fbctf:/etc/nginx/certs$ sudo rm -v self-ssl.original 
+removed 'self-ssl.original'
+fbctf@fbctf:/etc/nginx/certs$ sudo openssl x509 -req -days 4000 -in self-ssl.csr -signkey self-ssl.key -out self-ssl.crt
+Signature ok
+subject=/C=MX/ST=CDMX/L=CDMX/O=fbctf/OU=fbctf/CN=fbctf
+Getting Private key
+fbctf@fbctf:/etc/nginx/certs$ mv self-ssl.crt fbctf.csr
+mv: cannot move 'self-ssl.crt' to 'fbctf.csr': Permission denied
+fbctf@fbctf:/etc/nginx/certs$ sudo mv self-ssl.crt fbctf.csr
+fbctf@fbctf:/etc/nginx/certs$ sudo mv self-ssl.key fbctf.key
+fbctf@fbctf:/etc/nginx/certs$ ls
+fbctf.csr  fbctf.key  self-ssl.csr
+fbctf@fbctf:/etc/nginx/certs$ cd /var/www/
+fbctf@fbctf:/var/www$ sudo ap
+apg                   aplaymidi             apparmor_status       apport-cli            appres                apt                   apt-cdrom             aptdcon               apt-get               apt-sortpkgs
+apgbfm                apm_available         applygnupgdefaults    apport-collect        appstreamcli          apt-add-repository    apt-config            apt-extracttemplates  apt-key               apturl
+aplay                 apparmor_parser       apport-bug            apport-unpack         apropos               apt-cache             aptd                  apt-ftparchive        apt-mark              apturl-gtk
+fbctf@fbctf:/var/www$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.7.4-0ubuntu1).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 81 not upgraded.
+fbctf@fbctf:/var/www$ sudo git clone https://github.com/facebook/fbctf
+Cloning into 'fbctf'...
+remote: Counting objects: 4347, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 4347 (delta 0), reused 0 (delta 0), pack-reused 4341
+Receiving objects: 100% (4347/4347), 16.67 MiB | 5.22 MiB/s, done.
+Resolving deltas: 100% (2976/2976), done.
+Checking connectivity... done.
+
+=========================fbctf install==================================================================
+fbctf@fbctf:/var/www/fbctf$ sudo ./extra/provision.sh prod $PWD
+[+] Provisioning in prod mode
+chmod: cannot access '/etc/update-motd.d/51-cloudguest': No such file or directory
+[+] language-pack-en is already installed. skipping.
+[+] emacs is already installed. skipping.
+[+] Adding osquery repository keys
+Executing: /tmp/tmp.gdTCyHOkMm/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B
+gpg: requesting key C9D8B80B from hkp server keyserver.ubuntu.com
+gpg: key C9D8B80B: "osquery (osquery) <osquery@fb.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[+] Adding MyCLI repository keys
+OK
+[+] apt-transport-https is already installed. skipping.
+deb https://packagecloud.io/amjith/mycli/ubuntu/ trusty main
+Ign:1 http://dl.hhvm.com/ubuntu xenial InRelease
+Ign:2 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial InRelease     
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
+Hit:4 http://mx.archive.ubuntu.com/ubuntu xenial InRelease                                            
+Ign:5 http://dl.hhvm.com/ubuntu xenial Release                                                                                  
+Ign:6 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release                                                                   
+Ign:7 https://osquery-packages.s3.amazonaws.com/trusty trusty InRelease                               
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                            
+Get:9 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]                          
+Hit:10 https://osquery-packages.s3.amazonaws.com/trusty trusty Release                                            
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages                                                                 
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                                                                                 
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages                                                                                  
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages       
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US                  
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                       
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en                                    
+Get:19 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata        
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Hit:24 https://packagecloud.io/amjith/mycli/ubuntu trusty InRelease
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Err:8 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Err:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:21 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:23 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Err:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Err:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                                                                                                                                                                  
+Ign:20 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                                                                                                                                                             
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en                                                                                                                                                                
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata                                                                                                                                                         
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons                                                                                                                                                            
+Fetched 281 kB in 6s (41.3 kB/s)                                                                                                                                                                                                          
+Reading package lists... Done
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: https://osquery-packages.s3.amazonaws.com/trusty/dists/trusty/Release.gpg: Signature by key 1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B uses weak digest algorithm (SHA1)
+W: Invalid 'Date' entry in Release file /var/lib/apt/lists/osquery-packages.s3.amazonaws.com_trusty_dists_trusty_Release
+W: https://packagecloud.io/amjith/mycli/ubuntu/dists/trusty/InRelease: Signature by key F86AA916A2195E121AEDB11437BBEE3F7AD95B3F uses weak digest algorithm (SHA1)
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+[+] Installing osquery
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ osquery : Depends: libapt-pkg4.12 but it is not installable
+           Depends: libgcrypt11 but it is not installable
+E: Unable to correct problems, you have held broken packages.
+[+] mycli is already installed. skipping.
+[+] memcached is already installed. skipping.
+[+] htop is already installed. skipping.
+[+] Installing MySQL
+[+] mysql-server is already installed. skipping.
+[+] git is already installed. skipping.
+[+] software-properties-common is already installed. skipping.
+[+] Adding HHVM key
+Executing: /tmp/tmp.nD2WFLlDNZ/gpg.1.sh --recv-keys
+--keyserver
+hkp://keyserver.ubuntu.com:80
+0x5a16e7281be7a449
+gpg: requesting key 1BE7A449 from hkp server keyserver.ubuntu.com
+gpg: key 1BE7A449: "Paul Tarjan <pt@fb.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[+] Adding HHVM repo
+[+] Installing HHVM
+Ign:1 http://dl.hhvm.com/ubuntu xenial InRelease
+Ign:2 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial InRelease     
+Hit:3 http://mx.archive.ubuntu.com/ubuntu xenial InRelease          
+Ign:4 http://dl.hhvm.com/ubuntu xenial Release                                                                      
+Get:5 http://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]                                         
+Ign:6 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release                                                                   
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages                                            
+Ign:8 https://osquery-packages.s3.amazonaws.com/trusty trusty InRelease         
+Get:9 http://mx.archive.ubuntu.com/ubuntu xenial-updates InRelease [94.5 kB]                          
+Hit:10 https://osquery-packages.s3.amazonaws.com/trusty trusty Release                                            
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages                                                                 
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages                                                                                 
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages                                                                                  
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages                                  
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US                                             
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages        
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en                                    
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                  
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata  
+Get:21 http://mx.archive.ubuntu.com/ubuntu xenial-backports InRelease [92.2 kB]
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en       
+Hit:23 https://packagecloud.io/amjith/mycli/ubuntu trusty InRelease       
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons           
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Ign:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+Err:7 http://dl.hhvm.com/ubuntu xenial/main amd64 Packages
+  404  Not Found
+Ign:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+Err:12 http://dl.hhvm.com/ubuntu xenial/main i386 Packages
+  404  Not Found
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages
+Ign:14 http://dl.hhvm.com/ubuntu xenial/main all Packages
+Ign:16 http://dl.hhvm.com/ubuntu xenial/main Translation-en_US
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US
+Ign:18 http://dl.hhvm.com/ubuntu xenial/main Translation-en
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en
+Ign:20 http://dl.hhvm.com/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata
+Ign:24 http://dl.hhvm.com/ubuntu xenial/main DEP-11 64x64 Icons
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons
+Err:11 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Err:15 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main i386 Packages
+  404  Not Found [IP: 91.189.95.83 80]
+Ign:17 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main all Packages                                                                                                                                                                  
+Ign:19 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en_US                                                                                                                                                             
+Ign:22 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main Translation-en                                                                                                                                                                
+Ign:25 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main amd64 DEP-11 Metadata                                                                                                                                                         
+Ign:26 http://ppa.launchpad.net/avsm/ppa/ubuntu xenial/main DEP-11 64x64 Icons                                                                                                                                                            
+Fetched 281 kB in 6s (41.5 kB/s)                                                                                                                                                                                                          
+Reading package lists... Done
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: The repository 'http://dl.hhvm.com/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: The repository 'http://ppa.launchpad.net/avsm/ppa/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: https://osquery-packages.s3.amazonaws.com/trusty/dists/trusty/Release.gpg: Signature by key 1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B uses weak digest algorithm (SHA1)
+W: Invalid 'Date' entry in Release file /var/lib/apt/lists/osquery-packages.s3.amazonaws.com_trusty_dists_trusty_Release
+W: https://packagecloud.io/amjith/mycli/ubuntu/dists/trusty/InRelease: Signature by key F86AA916A2195E121AEDB11437BBEE3F7AD95B3F uses weak digest algorithm (SHA1)
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found
+E: Failed to fetch http://dl.hhvm.com/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-amd64/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Failed to fetch http://ppa.launchpad.net/avsm/ppa/ubuntu/dists/xenial/main/binary-i386/Packages  404  Not Found [IP: 91.189.95.83 80]
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:59 and /etc/apt/sources.list:62
+[+] hhvm is already installed. skipping.
+[+] Copying HHVM configuration
+; php options
+
+pid = /var/run/hhvm/pid
+
+; hhvm specific
+
+hhvm.jit = true
+hhvm.enable_xhp = true
+hhvm.force_hh = true
+hhvm.server.port = 9000
+hhvm.server.type = fastcgi
+hhvm.server.default_document = index.php
+hhvm.server.upload.upload_max_file_size = 25M
+hhvm.log.level = Error
+hhvm.log.use_log_file = true
+hhvm.log.file = /var/log/hhvm/error.log
+hhvm.log.header = true
+hhvm.log.access[default][file] = /var/log/hhvm/access.log
+hhvm.log.access[default][format] = "%h %l %u %t \"%r\" %>s %b"
+hhvm.server.source_root = /var/www/fbctf/
+hhvm.repo.central.path = /tmp/hhvm.hhbc
+hhvm.mysql.socket = /var/run/mysqld/mysqld.sock
+hhvm.pdo_mysql.socket = /var/run/mysqld/mysqld.sock
+hhvm.mysqli.socket = /var/run/mysqld/mysqld.sock
+[+] HHVM as PHP systemwide
+[+] Enabling HHVM to start by default
+[+] Restart HHVM
+[+] Installing composer
+All settings correct for using Composer
+Downloading 1.1.1...
+
+Composer successfully installed to: /var/www/fbctf/composer.phar
+Use it: php composer.phar
+Running composer as root/super user is highly discouraged as packages, plugins and scripts cannot always be trusted
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+  - Installing facebook/xhp-lib (2.3.0)
+    Downloading: 100%         
+
+  - Installing phpdocumentor/reflection-docblock (2.0.4)
+    Downloading: 100%         
+
+  - Installing symfony/yaml (v3.0.5)
+    Downloading: 100%         
+
+  - Installing sebastian/version (2.0.0)
+    Downloading: 100%         
+
+  - Installing sebastian/resource-operations (1.0.0)
+    Downloading: 100%         
+
+  - Installing sebastian/recursion-context (1.0.2)
+    Downloading: 100%         
+
+  - Installing sebastian/object-enumerator (1.0.0)
+    Downloading: 100%         
+
+  - Installing sebastian/global-state (1.1.1)
+    Downloading: 100%         
+
+  - Installing sebastian/exporter (1.2.1)
+    Downloading: 100%         
+
+  - Installing sebastian/environment (1.3.6)
+    Downloading: 100%         
+
+  - Installing sebastian/diff (1.4.1)
+    Downloading: 100%         
+
+  - Installing sebastian/comparator (1.2.0)
+    Downloading: 100%         
+
+  - Installing phpunit/php-text-template (1.2.1)
+    Downloading: 100%         
+
+  - Installing doctrine/instantiator (1.0.5)
+    Downloading: 100%         
+
+  - Installing phpunit/phpunit-mock-objects (3.1.3)
+    Downloading: 100%         
+
+  - Installing phpunit/php-timer (1.0.7)
+    Downloading: 100%         
+
+  - Installing phpunit/php-file-iterator (1.4.1)
+    Downloading: 100%         
+
+  - Installing sebastian/code-unit-reverse-lookup (1.0.0)
+    Downloading: 100%         
+
+  - Installing phpunit/php-token-stream (1.4.8)
+    Downloading: 100%         
+
+  - Installing phpunit/php-code-coverage (3.3.1)
+    Downloading: 100%         
+
+  - Installing phpspec/prophecy (v1.6.0)
+    Downloading: 100%         
+
+  - Installing myclabs/deep-copy (1.5.1)
+    Downloading: 100%         
+
+  - Installing phpunit/phpunit (5.3.2)
+    Downloading: 100%         
+
+  - Installing phpunit/dbunit (2.0.2)
+    Downloading: 100%         
+
+  - Installing phpunit/php-invoker (1.1.4)
+    Downloading: 100%         
+
+phpdocumentor/reflection-docblock suggests installing dflydev/markdown (~1.0)
+phpdocumentor/reflection-docblock suggests installing erusev/parsedown (~1.0)
+sebastian/global-state suggests installing ext-uopz (*)
+phpunit/php-code-coverage suggests installing ext-xdebug (>=2.4.0)
+Generating autoload files
+Running composer as root/super user is highly discouraged as packages, plugins and scripts cannot always be trusted
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+[+] npm is already installed. skipping.
+[+] nodejs-legacy is already installed. skipping.
+loadDep:bxslider → get    ▄ ╢██████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
+npm WARN deprecated cross-spawn-async@2.2.4: cross-spawn no longer requires a build toolchain, use it instead!
+npm WARN prefer global coffee-script@1.10.0 should be installed with -g
+npm WARN prefer global node-gyp@3.3.1 should be installed with -g
+
+> node-sass@3.7.0 install /var/www/fbctf/node_modules/node-sass
+> node scripts/install.js
+
+Binary downloaded and installed at /var/www/fbctf/node_modules/node-sass/vendor/linux-x64-46/binding.node
+
+> node-sass@3.7.0 postinstall /var/www/fbctf/node_modules/node-sass
+> node scripts/build.js
+
+"/var/www/fbctf/node_modules/node-sass/vendor/linux-x64-46/binding.node" exists. 
+ testing binary.
+Binary is fine; exiting.
+fbctf@0.0.1 /var/www/fbctf
+├─┬ babel-eslint@6.0.4 
+│ ├─┬ babel-traverse@6.9.0 
+│ │ ├─┬ babel-code-frame@6.8.0 
+│ │ │ └── js-tokens@1.0.3 
+│ │ ├── babel-messages@6.8.0 
+│ │ ├─┬ babel-runtime@6.9.0 
+│ │ │ └── core-js@2.4.0 
+│ │ ├── globals@8.18.0 
+│ │ └─┬ invariant@2.2.1 
+│ │   └── loose-envify@1.2.0 
+│ ├─┬ babel-types@6.9.0 
+│ │ └── to-fast-properties@1.0.2 
+│ ├── babylon@6.8.0 
+│ ├─┬ lodash.assign@4.0.9 
+│ │ ├── lodash.keys@4.0.7 
+│ │ └── lodash.rest@4.0.3 
+│ └─┬ lodash.pickby@4.4.0 
+│   ├─┬ lodash._baseiteratee@4.7.0 
+│   │ └─┬ lodash._stringtopath@4.8.0 
+│   │   └── lodash._basetostring@4.12.0 
+│   └── lodash.keysin@4.1.4 
+├─┬ babel-preset-react@6.5.0 
+│ ├── babel-plugin-syntax-flow@6.8.0 
+│ ├── babel-plugin-syntax-jsx@6.8.0 
+│ ├── babel-plugin-transform-flow-strip-types@6.8.0 
+│ ├── babel-plugin-transform-react-display-name@6.8.0 
+│ ├─┬ babel-plugin-transform-react-jsx@6.8.0 
+│ │ └── babel-helper-builder-react-jsx@6.9.0 
+│ └── babel-plugin-transform-react-jsx-source@6.9.0 
+├─┬ babelify@7.3.0 
+│ ├─┬ babel-core@6.9.0 
+│ │ ├─┬ babel-generator@6.9.0 
+│ │ │ └─┬ detect-indent@3.0.1 
+│ │ │   └─┬ repeating@1.1.3 
+│ │ │     └── is-finite@1.0.1 
+│ │ ├── babel-helpers@6.8.0 
+│ │ ├─┬ babel-register@6.9.0 
+│ │ │ ├─┬ home-or-tmp@1.0.0 
+│ │ │ │ ├── os-tmpdir@1.0.1 
+│ │ │ │ └── user-home@1.1.1 
+│ │ │ └─┬ source-map-support@0.2.10 
+│ │ │   └─┬ source-map@0.1.32 
+│ │ │     └── amdefine@1.0.0 
+│ │ ├── babel-template@6.9.0 
+│ │ ├── convert-source-map@1.2.0 
+│ │ ├── json5@0.4.0 
+│ │ ├── minimatch@2.0.10 
+│ │ ├── path-exists@1.0.0 
+│ │ ├── private@0.1.6 
+│ │ ├── shebang-regex@1.0.0 
+│ │ ├── slash@1.0.0 
+│ │ └── source-map@0.5.6 
+│ └── object-assign@4.1.0 
+├── bxslider@4.2.6 
+├── d3@3.5.17 
+├── dropkickjs@2.1.8 
+├─┬ eslint@2.10.2 
+│ ├─┬ chalk@1.1.3 
+│ │ ├── ansi-styles@2.2.1 
+│ │ ├── escape-string-regexp@1.0.5 
+│ │ ├── has-ansi@2.0.0 
+│ │ └── supports-color@2.0.0 
+│ ├─┬ concat-stream@1.5.1 
+│ │ ├── inherits@2.0.1 
+│ │ ├─┬ readable-stream@2.0.6 
+│ │ │ ├── core-util-is@1.0.2 
+│ │ │ ├── process-nextick-args@1.0.7 
+│ │ │ └── util-deprecate@1.0.2 
+│ │ └── typedarray@0.0.6 
+│ ├─┬ debug@2.2.0 
+│ │ └── ms@0.7.1 
+│ ├─┬ doctrine@1.2.2 
+│ │ ├── esutils@1.1.6 
+│ │ └── isarray@1.0.0 
+│ ├─┬ es6-map@0.1.3 
+│ │ ├── d@0.1.1 
+│ │ ├── es5-ext@0.10.11 
+│ │ ├── es6-iterator@2.0.0 
+│ │ ├── es6-set@0.1.4 
+│ │ ├── es6-symbol@3.0.2 
+│ │ └── event-emitter@0.3.4 
+│ ├─┬ escope@3.6.0 
+│ │ ├── es6-weak-map@2.0.1 
+│ │ └─┬ esrecurse@4.1.0 
+│ │   └── estraverse@4.1.1 
+│ ├─┬ espree@3.1.4 
+│ │ ├── acorn@3.1.0 
+│ │ └── acorn-jsx@3.0.1 
+│ ├── estraverse@4.2.0 
+│ ├── esutils@2.0.2 
+│ ├─┬ file-entry-cache@1.2.4 
+│ │ └─┬ flat-cache@1.0.10 
+│ │   ├─┬ del@2.2.0 
+│ │   │ ├─┬ globby@4.1.0 
+│ │   │ │ ├─┬ array-union@1.0.1 
+│ │   │ │ │ └── array-uniq@1.0.2 
+│ │   │ │ └── glob@6.0.4 
+│ │   │ ├── is-path-cwd@1.0.0 
+│ │   │ ├─┬ is-path-in-cwd@1.0.0 
+│ │   │ │ └── is-path-inside@1.0.0 
+│ │   │ ├── pify@2.3.0 
+│ │   │ └─┬ pinkie-promise@2.0.1 
+│ │   │   └── pinkie@2.0.4 
+│ │   ├── graceful-fs@4.1.4 
+│ │   ├── read-json-sync@1.1.1 
+│ │   └── write@0.2.1 
+│ ├─┬ glob@7.0.3 
+│ │ ├─┬ inflight@1.0.5 
+│ │ │ └── wrappy@1.0.2 
+│ │ └── once@1.3.3 
+│ ├── globals@9.6.0 
+│ ├── ignore@3.1.2 
+│ ├── imurmurhash@0.1.4 
+│ ├─┬ inquirer@0.12.0 
+│ │ ├── ansi-escapes@1.4.0 
+│ │ ├── ansi-regex@2.0.0 
+│ │ ├─┬ cli-cursor@1.0.2 
+│ │ │ └─┬ restore-cursor@1.0.1 
+│ │ │   └── exit-hook@1.1.1 
+│ │ ├── cli-width@2.1.0 
+│ │ ├── figures@1.7.0 
+│ │ ├─┬ readline2@1.0.1 
+│ │ │ ├─┬ code-point-at@1.0.0 
+│ │ │ │ └── number-is-nan@1.0.0 
+│ │ │ ├── is-fullwidth-code-point@1.0.0 
+│ │ │ └── mute-stream@0.0.5 
+│ │ ├── run-async@0.1.0 
+│ │ ├── rx-lite@3.1.2 
+│ │ ├── string-width@1.0.1 
+│ │ └── through@2.3.8 
+│ ├─┬ is-my-json-valid@2.13.1 
+│ │ ├── generate-function@2.0.0 
+│ │ ├─┬ generate-object-property@1.2.0 
+│ │ │ └── is-property@1.0.2 
+│ │ ├── jsonpointer@2.0.0 
+│ │ └── xtend@4.0.1 
+│ ├─┬ is-resolvable@1.0.0 
+│ │ └── tryit@1.0.2 
+│ ├─┬ js-yaml@3.6.1 
+│ │ ├─┬ argparse@1.0.7 
+│ │ │ └── sprintf-js@1.0.3 
+│ │ └── esprima@2.7.2 
+│ ├─┬ json-stable-stringify@1.0.1 
+│ │ └── jsonify@0.0.0 
+│ ├── lodash@4.12.0 
+│ ├─┬ mkdirp@0.5.1 
+│ │ └── minimist@0.0.8 
+│ ├─┬ optionator@0.8.1 
+│ │ ├── deep-is@0.1.3 
+│ │ ├── fast-levenshtein@1.1.3 
+│ │ ├── levn@0.3.0 
+│ │ ├── prelude-ls@1.1.2 
+│ │ ├── type-check@0.3.2 
+│ │ └── wordwrap@1.0.0 
+│ ├── path-is-absolute@1.0.0 
+│ ├── path-is-inside@1.0.1 
+│ ├── pluralize@1.2.1 
+│ ├── progress@1.1.8 
+│ ├─┬ require-uncached@1.0.2 
+│ │ ├─┬ caller-path@0.1.0 
+│ │ │ └── callsites@0.2.0 
+│ │ └── resolve-from@1.0.1 
+│ ├── shelljs@0.6.0 
+│ ├── strip-json-comments@1.0.4 
+│ ├─┬ table@3.7.8 
+│ │ ├── bluebird@3.4.0 
+│ │ ├── slice-ansi@0.0.4 
+│ │ ├── tv4@1.2.7 
+│ │ └── xregexp@3.1.1 
+│ ├── text-table@0.2.0 
+│ └─┬ user-home@2.0.0 
+│   └── os-homedir@1.0.1 
+├── eslint-plugin-flowtype@2.2.7 
+├─┬ grunt@1.0.1 
+│ ├── coffee-script@1.10.0 
+│ ├─┬ dateformat@1.0.12 
+│ │ ├── get-stdin@4.0.1 
+│ │ └─┬ meow@3.7.0 
+│ │   ├─┬ camelcase-keys@2.1.0 
+│ │   │ └── camelcase@2.1.1 
+│ │   ├── decamelize@1.2.0 
+│ │   ├─┬ loud-rejection@1.3.0 
+│ │   │ ├── array-find-index@1.0.1 
+│ │   │ └── signal-exit@2.1.2 
+│ │   ├── map-obj@1.0.1 
+│ │   ├── minimist@1.2.0 
+│ │   ├─┬ normalize-package-data@2.3.5 
+│ │   │ ├── hosted-git-info@2.1.5 
+│ │   │ ├─┬ is-builtin-module@1.0.0 
+│ │   │ │ └── builtin-modules@1.1.1 
+│ │   │ └─┬ validate-npm-package-license@3.0.1 
+│ │   │   ├─┬ spdx-correct@1.0.2 
+│ │   │   │ └── spdx-license-ids@1.2.1 
+│ │   │   └─┬ spdx-expression-parse@1.0.2 
+│ │   │     └── spdx-exceptions@1.0.4 
+│ │   ├─┬ read-pkg-up@1.0.1 
+│ │   │ ├─┬ find-up@1.1.2 
+│ │   │ │ └── path-exists@2.1.0 
+│ │   │ └─┬ read-pkg@1.1.0 
+│ │   │   ├─┬ load-json-file@1.1.0 
+│ │   │   │ ├─┬ parse-json@2.2.0 
+│ │   │   │ │ └─┬ error-ex@1.3.0 
+│ │   │   │ │   └── is-arrayish@0.2.1 
+│ │   │   │ └─┬ strip-bom@2.0.0 
+│ │   │   │   └── is-utf8@0.2.1 
+│ │   │   └── path-type@1.1.0 
+│ │   ├─┬ redent@1.0.0 
+│ │   │ ├─┬ indent-string@2.1.0 
+│ │   │ │ └── repeating@2.0.1 
+│ │   │ └── strip-indent@1.0.1 
+│ │   └── trim-newlines@1.0.0 
+│ ├── eventemitter2@0.4.14 
+│ ├── exit@0.1.2 
+│ ├─┬ findup-sync@0.3.0 
+│ │ └── glob@5.0.15 
+│ ├── grunt-cli@1.2.0 
+│ ├── grunt-known-options@1.1.0 
+│ ├─┬ grunt-legacy-log@1.0.0 
+│ │ ├── colors@1.1.2 
+│ │ ├─┬ grunt-legacy-log-utils@1.0.0 
+│ │ │ └── lodash@4.3.0 
+│ │ ├── hooker@0.2.3 
+│ │ ├── lodash@3.10.1 
+│ │ └── underscore.string@3.2.3 
+│ ├─┬ grunt-legacy-util@1.0.0 
+│ │ ├── getobject@0.1.0 
+│ │ ├── lodash@4.3.0 
+│ │ └─┬ which@1.2.9 
+│ │   └── isexe@1.1.2 
+│ ├── iconv-lite@0.4.13 
+│ ├── js-yaml@3.5.5 
+│ ├─┬ minimatch@3.0.0 
+│ │ └─┬ brace-expansion@1.1.4 
+│ │   ├── balanced-match@0.4.1 
+│ │   └── concat-map@0.0.1 
+│ ├─┬ nopt@3.0.6 
+│ │ └── abbrev@1.0.7 
+│ └── rimraf@2.2.8 
+├─┬ grunt-browserify@5.0.0 
+│ ├── async@1.5.2 
+│ ├─┬ browserify@13.0.1 
+│ │ ├── assert@1.3.0 
+│ │ ├─┬ browser-pack@6.0.1 
+│ │ │ ├─┬ combine-source-map@0.7.2 
+│ │ │ │ ├── convert-source-map@1.1.3 
+│ │ │ │ ├── inline-source-map@0.6.2 
+│ │ │ │ └── lodash.memoize@3.0.4 
+│ │ │ └── umd@3.0.1 
+│ │ ├── browser-resolve@1.11.1 
+│ │ ├─┬ browserify-zlib@0.1.4 
+│ │ │ └── pako@0.2.8 
+│ │ ├─┬ buffer@4.6.0 
+│ │ │ ├── base64-js@1.1.2 
+│ │ │ └── ieee754@1.1.6 
+│ │ ├─┬ console-browserify@1.1.0 
+│ │ │ └── date-now@0.1.4 
+│ │ ├── constants-browserify@1.0.0 
+│ │ ├─┬ crypto-browserify@3.11.0 
+│ │ │ ├─┬ browserify-cipher@1.0.0 
+│ │ │ │ ├─┬ browserify-aes@1.0.6 
+│ │ │ │ │ └── buffer-xor@1.0.3 
+│ │ │ │ ├─┬ browserify-des@1.0.0 
+│ │ │ │ │ └─┬ des.js@1.0.0 
+│ │ │ │ │   └── minimalistic-assert@1.0.0 
+│ │ │ │ └── evp_bytestokey@1.0.0 
+│ │ │ ├─┬ browserify-sign@4.0.0 
+│ │ │ │ ├── bn.js@4.11.3 
+│ │ │ │ ├── browserify-rsa@4.0.1 
+│ │ │ │ ├─┬ elliptic@6.2.5 
+│ │ │ │ │ ├── brorand@1.0.5 
+│ │ │ │ │ └── hash.js@1.0.3 
+│ │ │ │ └─┬ parse-asn1@5.0.0 
+│ │ │ │   └── asn1.js@4.6.0 
+│ │ │ ├── create-ecdh@4.0.0 
+│ │ │ ├─┬ create-hash@1.1.2 
+│ │ │ │ ├── cipher-base@1.0.2 
+│ │ │ │ └── ripemd160@1.0.1 
+│ │ │ ├── create-hmac@1.1.4 
+│ │ │ ├─┬ diffie-hellman@5.0.2 
+│ │ │ │ └── miller-rabin@4.0.0 
+│ │ │ ├── pbkdf2@3.0.4 
+│ │ │ ├── public-encrypt@4.0.0 
+│ │ │ └── randombytes@2.0.3 
+│ │ ├── defined@1.0.0 
+│ │ ├── deps-sort@2.0.0 
+│ │ ├── domain-browser@1.1.7 
+│ │ ├── duplexer2@0.1.4 
+│ │ ├── events@1.1.0 
+│ │ ├── glob@5.0.15 
+│ │ ├─┬ has@1.0.1 
+│ │ │ └── function-bind@1.1.0 
+│ │ ├── htmlescape@1.1.1 
+│ │ ├── https-browserify@0.0.1 
+│ │ ├─┬ insert-module-globals@7.0.1 
+│ │ │ ├── is-buffer@1.1.3 
+│ │ │ └─┬ lexical-scope@1.2.0 
+│ │ │   └─┬ astw@2.0.0 
+│ │ │     └── acorn@1.2.2 
+│ │ ├─┬ JSONStream@1.1.1 
+│ │ │ └── jsonparse@1.2.0 
+│ │ ├─┬ labeled-stream-splicer@2.0.0 
+│ │ │ ├── isarray@0.0.1 
+│ │ │ └── stream-splicer@2.0.0 
+│ │ ├─┬ module-deps@4.0.5 
+│ │ │ ├─┬ detective@4.3.1 
+│ │ │ │ └── acorn@1.2.2 
+│ │ │ └── stream-combiner2@1.1.1 
+│ │ ├── os-browserify@0.1.2 
+│ │ ├─┬ parents@1.0.1 
+│ │ │ └── path-platform@0.11.15 
+│ │ ├── path-browserify@0.0.0 
+│ │ ├── process@0.11.3 
+│ │ ├── punycode@1.4.1 
+│ │ ├── querystring-es3@0.2.1 
+│ │ ├── read-only-stream@2.0.0 
+│ │ ├─┬ shasum@1.0.2 
+│ │ │ ├── json-stable-stringify@0.0.1 
+│ │ │ └── sha.js@2.4.5 
+│ │ ├─┬ shell-quote@1.6.0 
+│ │ │ ├── array-filter@0.0.1 
+│ │ │ ├── array-map@0.0.0 
+│ │ │ └── array-reduce@0.0.0 
+│ │ ├── stream-browserify@2.0.1 
+│ │ ├─┬ stream-http@2.3.0 
+│ │ │ ├── builtin-status-codes@2.0.0 
+│ │ │ ├─┬ readable-stream@2.1.4 
+│ │ │ │ └── buffer-shims@1.0.0 
+│ │ │ └── to-arraybuffer@1.0.1 
+│ │ ├── string_decoder@0.10.31 
+│ │ ├── subarg@1.0.0 
+│ │ ├─┬ syntax-error@1.1.6 
+│ │ │ └── acorn@2.7.0 
+│ │ ├── through2@2.0.1 
+│ │ ├── timers-browserify@1.4.2 
+│ │ ├── tty-browserify@0.0.0 
+│ │ ├─┬ url@0.11.0 
+│ │ │ ├── punycode@1.3.2 
+│ │ │ └── querystring@0.2.0 
+│ │ ├── util@0.10.3 
+│ │ └─┬ vm-browserify@0.0.4 
+│ │   └── indexof@0.0.1 
+│ ├── glob@6.0.4 
+│ ├── lodash@3.10.1 
+│ ├── resolve@1.1.7 
+│ └─┬ watchify@3.7.0 
+│   ├─┬ anymatch@1.3.0 
+│   │ ├── arrify@1.0.1 
+│   │ └─┬ micromatch@2.3.8 
+│   │   ├─┬ arr-diff@2.0.0 
+│   │   │ └── arr-flatten@1.0.1 
+│   │   ├── array-unique@0.2.1 
+│   │   ├─┬ braces@1.8.4 
+│   │   │ ├─┬ expand-range@1.8.2 
+│   │   │ │ └─┬ fill-range@2.2.3 
+│   │   │ │   ├── is-number@2.1.0 
+│   │   │ │   ├── isobject@2.1.0 
+│   │   │ │   └── randomatic@1.1.5 
+│   │   │ ├── preserve@0.2.0 
+│   │   │ └── repeat-element@1.1.2 
+│   │   ├─┬ expand-brackets@0.1.5 
+│   │   │ └── is-posix-bracket@0.1.1 
+│   │   ├── extglob@0.3.2 
+│   │   ├── filename-regex@2.0.0 
+│   │   ├── is-extglob@1.0.0 
+│   │   ├── kind-of@3.0.3 
+│   │   ├── normalize-path@2.0.1 
+│   │   ├─┬ object.omit@2.0.0 
+│   │   │ ├─┬ for-own@0.1.4 
+│   │   │ │ └── for-in@0.1.5 
+│   │   │ └── is-extendable@0.1.1 
+│   │   ├─┬ parse-glob@3.0.4 
+│   │   │ ├── glob-base@0.3.0 
+│   │   │ └── is-dotfile@1.0.2 
+│   │   └─┬ regex-cache@0.4.3 
+│   │     ├── is-equal-shallow@0.1.3 
+│   │     └── is-primitive@2.0.0 
+│   ├─┬ chokidar@1.5.1 
+│   │ ├── async-each@1.0.0 
+│   │ ├── glob-parent@2.0.0 
+│   │ ├─┬ is-binary-path@1.0.1 
+│   │ │ └── binary-extensions@1.4.0 
+│   │ ├── is-glob@2.0.1 
+│   │ └── readdirp@2.0.0 
+│   └── outpipe@1.1.1 
+├─┬ grunt-contrib-copy@1.0.0 
+│ └── file-sync-cmp@0.1.1 
+├─┬ grunt-contrib-uglify@1.0.1 
+│ ├─┬ maxmin@1.1.0 
+│ │ ├── gzip-size@1.0.0 
+│ │ └── pretty-bytes@1.0.4 
+│ ├─┬ uglify-js@2.6.2 
+│ │ ├── async@0.2.10 
+│ │ ├── uglify-to-browserify@1.0.2 
+│ │ └─┬ yargs@3.10.0 
+│ │   ├── camelcase@1.2.1 
+│ │   ├─┬ cliui@2.1.0 
+│ │   │ ├─┬ center-align@0.1.3 
+│ │   │ │ ├─┬ align-text@0.1.4 
+│ │   │ │ │ ├── longest@1.0.1 
+│ │   │ │ │ └── repeat-string@1.5.4 
+│ │   │ │ └── lazy-cache@1.0.4 
+│ │   │ ├── right-align@0.1.3 
+│ │   │ └── wordwrap@0.0.2 
+│ │   └── window-size@0.1.0 
+│ └── uri-path@1.0.0 
+├─┬ grunt-contrib-watch@1.0.0 
+│ ├─┬ gaze@1.0.0 
+│ │ └─┬ globule@0.2.0 
+│ │   ├─┬ glob@3.2.11 
+│ │   │ └── minimatch@0.3.0 
+│ │   ├── lodash@2.4.2 
+│ │   └─┬ minimatch@0.2.14 
+│ │     ├── lru-cache@2.7.3 
+│ │     └── sigmund@1.0.1 
+│ ├── lodash@3.10.1 
+│ └─┬ tiny-lr@0.2.1 
+│   ├─┬ body-parser@1.14.2 
+│   │ ├── bytes@2.2.0 
+│   │ ├── content-type@1.0.2 
+│   │ ├── depd@1.1.0 
+│   │ ├─┬ http-errors@1.3.1 
+│   │ │ └── statuses@1.3.0 
+│   │ ├─┬ on-finished@2.3.0 
+│   │ │ └── ee-first@1.1.1 
+│   │ ├── qs@5.2.0 
+│   │ ├─┬ raw-body@2.1.6 
+│   │ │ ├── bytes@2.3.0 
+│   │ │ └── unpipe@1.0.0 
+│   │ └─┬ type-is@1.6.13 
+│   │   └── media-typer@0.3.0 
+│   ├─┬ faye-websocket@0.10.0 
+│   │ └─┬ websocket-driver@0.6.5 
+│   │   └── websocket-extensions@0.1.1 
+│   ├── livereload-js@2.2.2 
+│   ├── parseurl@1.3.1 
+│   └── qs@5.1.0 
+├─┬ grunt-env@0.4.4 
+│ ├── ini@1.3.4 
+│ └── lodash@2.4.2 
+├── grunt-eslint@18.1.0 
+├── grunt-force-task@2.0.0 
+├─┬ grunt-run@0.6.0 
+│ ├── lodash@3.10.1 
+│ └── strip-ansi@3.0.1 
+├─┬ grunt-sass@1.2.0 
+│ ├─┬ each-async@1.1.1 
+│ │ ├── onetime@1.1.0 
+│ │ └── set-immediate-shim@1.0.1 
+│ └─┬ node-sass@3.7.0 
+│   ├── async-foreach@0.1.3 
+│   ├─┬ cross-spawn-async@2.2.4 
+│   │ └─┬ lru-cache@4.0.1 
+│   │   ├── pseudomap@1.0.2 
+│   │   └── yallist@2.0.0 
+│   ├── in-publish@2.0.0 
+│   ├── nan@2.3.3 
+│   ├─┬ node-gyp@3.3.1 
+│   │ ├── fstream@1.0.9 
+│   │ ├─┬ glob@4.5.3 
+│   │ │ └── minimatch@2.0.10 
+│   │ ├── minimatch@1.0.0 
+│   │ ├─┬ npmlog@2.0.4 
+│   │ │ ├── ansi@0.3.1 
+│   │ │ ├─┬ are-we-there-yet@1.1.2 
+│   │ │ │ └── delegates@1.0.0 
+│   │ │ └─┬ gauge@1.2.7 
+│   │ │   ├── has-unicode@2.0.0 
+│   │ │   ├─┬ lodash.pad@4.4.0 
+│   │ │   │ ├── lodash._baseslice@4.0.0 
+│   │ │   │ └── lodash.tostring@4.1.3 
+│   │ │   ├── lodash.padend@4.5.0 
+│   │ │   └── lodash.padstart@4.5.0 
+│   │ ├── osenv@0.1.3 
+│   │ ├─┬ path-array@1.0.1 
+│   │ │ └── array-index@1.0.0 
+│   │ ├── rimraf@2.5.2 
+│   │ ├── semver@5.1.0 
+│   │ └─┬ tar@2.2.1 
+│   │   └── block-stream@0.0.9 
+│   ├─┬ request@2.72.0 
+│   │ ├── aws-sign2@0.6.0 
+│   │ ├── aws4@1.4.1 
+│   │ ├── bl@1.1.2 
+│   │ ├── caseless@0.11.0 
+│   │ ├─┬ combined-stream@1.0.5 
+│   │ │ └── delayed-stream@1.0.0 
+│   │ ├── extend@3.0.0 
+│   │ ├── forever-agent@0.6.1 
+│   │ ├── form-data@1.0.0-rc4 
+│   │ ├─┬ har-validator@2.0.6 
+│   │ │ └─┬ commander@2.9.0 
+│   │ │   └── graceful-readlink@1.0.1 
+│   │ ├─┬ hawk@3.1.3 
+│   │ │ ├── boom@2.10.1 
+│   │ │ ├── cryptiles@2.0.5 
+│   │ │ ├── hoek@2.16.3 
+│   │ │ └── sntp@1.0.9 
+│   │ ├─┬ http-signature@1.1.1 
+│   │ │ ├── assert-plus@0.2.0 
+│   │ │ ├─┬ jsprim@1.2.2 
+│   │ │ │ ├── extsprintf@1.0.2 
+│   │ │ │ ├── json-schema@0.2.2 
+│   │ │ │ └── verror@1.3.6 
+│   │ │ └─┬ sshpk@1.8.3 
+│   │ │   ├── asn1@0.2.3 
+│   │ │   ├── assert-plus@1.0.0 
+│   │ │   ├─┬ dashdash@1.13.1 
+│   │ │   │ └── assert-plus@1.0.0 
+│   │ │   ├── ecc-jsbn@0.1.1 
+│   │ │   ├─┬ getpass@0.1.6 
+│   │ │   │ └── assert-plus@1.0.0 
+│   │ │   ├── jodid25519@1.0.2 
+│   │ │   ├── jsbn@0.1.0 
+│   │ │   └── tweetnacl@0.13.3 
+│   │ ├── is-typedarray@1.0.0 
+│   │ ├── isstream@0.1.2 
+│   │ ├── json-stringify-safe@5.0.1 
+│   │ ├─┬ mime-types@2.1.11 
+│   │ │ └── mime-db@1.23.0 
+│   │ ├── node-uuid@1.4.7 
+│   │ ├── oauth-sign@0.8.2 
+│   │ ├── qs@6.1.0 
+│   │ ├── stringstream@0.0.5 
+│   │ ├── tough-cookie@2.2.2 
+│   │ └── tunnel-agent@0.4.3 
+│   └─┬ sass-graph@2.1.1 
+│     └── glob@6.0.4 
+├── hoverintent-jqplugin@0.2.1 
+├── jquery@2.2.4 
+├── keycode@2.1.1 
+└── typed.js@1.1.1 
+
+npm WARN optional Skipping failed optional dependency /chokidar/fsevents:
+npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.12
+/usr/local/bin/grunt -> /usr/local/lib/node_modules/grunt/bin/grunt
+/usr/local/lib
+└─┬ grunt@1.0.1 
+  ├── coffee-script@1.10.0 
+  ├─┬ dateformat@1.0.12 
+  │ ├── get-stdin@4.0.1 
+  │ └─┬ meow@3.7.0 
+  │   ├─┬ camelcase-keys@2.1.0 
+  │   │ └── camelcase@2.1.1 
+  │   ├── decamelize@1.2.0 
+  │   ├─┬ loud-rejection@1.3.0 
+  │   │ ├── array-find-index@1.0.1 
+  │   │ └── signal-exit@2.1.2 
+  │   ├── map-obj@1.0.1 
+  │   ├── minimist@1.2.0 
+  │   ├─┬ normalize-package-data@2.3.5 
+  │   │ ├── hosted-git-info@2.1.5 
+  │   │ ├─┬ is-builtin-module@1.0.0 
+  │   │ │ └── builtin-modules@1.1.1 
+  │   │ ├── semver@5.1.0 
+  │   │ └─┬ validate-npm-package-license@3.0.1 
+  │   │   ├─┬ spdx-correct@1.0.2 
+  │   │   │ └── spdx-license-ids@1.2.1 
+  │   │   └─┬ spdx-expression-parse@1.0.2 
+  │   │     └── spdx-exceptions@1.0.4 
+  │   ├── object-assign@4.1.0 
+  │   ├─┬ read-pkg-up@1.0.1 
+  │   │ ├─┬ find-up@1.1.2 
+  │   │ │ ├── path-exists@2.1.0 
+  │   │ │ └─┬ pinkie-promise@2.0.1 
+  │   │ │   └── pinkie@2.0.4 
+  │   │ └─┬ read-pkg@1.1.0 
+  │   │   ├─┬ load-json-file@1.1.0 
+  │   │   │ ├── graceful-fs@4.1.4 
+  │   │   │ ├─┬ parse-json@2.2.0 
+  │   │   │ │ └─┬ error-ex@1.3.0 
+  │   │   │ │   └── is-arrayish@0.2.1 
+  │   │   │ ├── pify@2.3.0 
+  │   │   │ └─┬ strip-bom@2.0.0 
+  │   │   │   └── is-utf8@0.2.1 
+  │   │   └── path-type@1.1.0 
+  │   ├─┬ redent@1.0.0 
+  │   │ ├─┬ indent-string@2.1.0 
+  │   │ │ └─┬ repeating@2.0.1 
+  │   │ │   └─┬ is-finite@1.0.1 
+  │   │ │     └── number-is-nan@1.0.0 
+  │   │ └── strip-indent@1.0.1 
+  │   └── trim-newlines@1.0.0 
+  ├── eventemitter2@0.4.14 
+  ├── exit@0.1.2 
+  ├─┬ findup-sync@0.3.0 
+  │ └── glob@5.0.15 
+  ├─┬ glob@7.0.3 
+  │ ├─┬ inflight@1.0.5 
+  │ │ └── wrappy@1.0.2 
+  │ ├── inherits@2.0.1 
+  │ └── once@1.3.3 
+  ├─┬ grunt-cli@1.2.0 
+  │ └── resolve@1.1.7 
+  ├── grunt-known-options@1.1.0 
+  ├─┬ grunt-legacy-log@1.0.0 
+  │ ├── colors@1.1.2 
+  │ ├─┬ grunt-legacy-log-utils@1.0.0 
+  │ │ ├─┬ chalk@1.1.3 
+  │ │ │ ├── ansi-styles@2.2.1 
+  │ │ │ ├── escape-string-regexp@1.0.5 
+  │ │ │ ├─┬ has-ansi@2.0.0 
+  │ │ │ │ └── ansi-regex@2.0.0 
+  │ │ │ ├── strip-ansi@3.0.1 
+  │ │ │ └── supports-color@2.0.0 
+  │ │ └── lodash@4.3.0 
+  │ ├── hooker@0.2.3 
+  │ ├── lodash@3.10.1 
+  │ └── underscore.string@3.2.3 
+  ├─┬ grunt-legacy-util@1.0.0 
+  │ ├── async@1.5.2 
+  │ ├── getobject@0.1.0 
+  │ ├── lodash@4.3.0 
+  │ └─┬ which@1.2.9 
+  │   └── isexe@1.1.2 
+  ├── iconv-lite@0.4.13 
+  ├─┬ js-yaml@3.5.5 
+  │ ├─┬ argparse@1.0.7 
+  │ │ └── sprintf-js@1.0.3 
+  │ └── esprima@2.7.2 
+  ├─┬ minimatch@3.0.0 
+  │ └─┬ brace-expansion@1.1.4 
+  │   ├── balanced-match@0.4.1 
+  │   └── concat-map@0.0.1 
+  ├─┬ nopt@3.0.6 
+  │ └── abbrev@1.0.7 
+  ├── path-is-absolute@1.0.0 
+  └── rimraf@2.2.8 
+
+/usr/local/bin/flow -> /usr/local/lib/node_modules/flow-bin/cli.js
+
+> flow-bin@0.25.0 postinstall /usr/local/lib/node_modules/flow-bin
+> node lib/install.js
+
+  ✔ flow binary test passed successfully
+/usr/local/lib
+└─┬ flow-bin@0.25.0 
+  ├─┬ bin-wrapper@3.0.2 
+  │ ├─┬ bin-check@2.0.0 
+  │ │ └─┬ executable@1.1.0 
+  │ │   └─┬ meow@3.7.0 
+  │ │     ├─┬ camelcase-keys@2.1.0 
+  │ │     │ └── camelcase@2.1.1 
+  │ │     ├── decamelize@1.2.0 
+  │ │     ├─┬ loud-rejection@1.3.0 
+  │ │     │ ├── array-find-index@1.0.1 
+  │ │     │ └── signal-exit@2.1.2 
+  │ │     ├── map-obj@1.0.1 
+  │ │     ├─┬ normalize-package-data@2.3.5 
+  │ │     │ ├── hosted-git-info@2.1.5 
+  │ │     │ ├─┬ is-builtin-module@1.0.0 
+  │ │     │ │ └── builtin-modules@1.1.1 
+  │ │     │ └─┬ validate-npm-package-license@3.0.1 
+  │ │     │   ├─┬ spdx-correct@1.0.2 
+  │ │     │   │ └── spdx-license-ids@1.2.1 
+  │ │     │   └─┬ spdx-expression-parse@1.0.2 
+  │ │     │     └── spdx-exceptions@1.0.4 
+  │ │     ├─┬ read-pkg-up@1.0.1 
+  │ │     │ ├─┬ find-up@1.1.2 
+  │ │     │ │ └── path-exists@2.1.0 
+  │ │     │ └─┬ read-pkg@1.1.0 
+  │ │     │   ├─┬ load-json-file@1.1.0 
+  │ │     │   │ └── pify@2.3.0 
+  │ │     │   └── path-type@1.1.0 
+  │ │     ├─┬ redent@1.0.0 
+  │ │     │ ├─┬ indent-string@2.1.0 
+  │ │     │ │ └─┬ repeating@2.0.1 
+  │ │     │ │   └─┬ is-finite@1.0.1 
+  │ │     │ │     └── number-is-nan@1.0.0 
+  │ │     │ └── strip-indent@1.0.1 
+  │ │     └── trim-newlines@1.0.0 
+  │ ├─┬ bin-version-check@2.1.0 
+  │ │ ├─┬ bin-version@1.0.4 
+  │ │ │ └─┬ find-versions@1.2.1 
+  │ │ │   ├── array-uniq@1.0.2 
+  │ │ │   └── semver-regex@1.0.0 
+  │ │ ├── minimist@1.2.0 
+  │ │ ├── semver@4.3.6 
+  │ │ └─┬ semver-truncate@1.1.0 
+  │ │   └── semver@5.1.0 
+  │ ├─┬ download@4.4.3 
+  │ │ ├─┬ caw@1.2.0 
+  │ │ │ ├─┬ get-proxy@1.1.0 
+  │ │ │ │ └─┬ rc@1.1.6 
+  │ │ │ │   ├── deep-extend@0.4.1 
+  │ │ │ │   ├── ini@1.3.4 
+  │ │ │ │   └── strip-json-comments@1.0.4 
+  │ │ │ ├── is-obj@1.0.1 
+  │ │ │ ├── object-assign@3.0.0 
+  │ │ │ └── tunnel-agent@0.4.3 
+  │ │ ├─┬ concat-stream@1.5.1 
+  │ │ │ ├── inherits@2.0.1 
+  │ │ │ ├── readable-stream@2.0.6 
+  │ │ │ └── typedarray@0.0.6 
+  │ │ ├─┬ filenamify@1.2.1 
+  │ │ │ ├── filename-reserved-regex@1.0.0 
+  │ │ │ ├── strip-outer@1.0.0 
+  │ │ │ └── trim-repeated@1.0.0 
+  │ │ ├─┬ got@5.6.0 
+  │ │ │ ├─┬ create-error-class@3.0.2 
+  │ │ │ │ └── capture-stack-trace@1.0.0 
+  │ │ │ ├── duplexer2@0.1.4 
+  │ │ │ ├── is-plain-obj@1.1.0 
+  │ │ │ ├── is-redirect@1.0.0 
+  │ │ │ ├── is-retry-allowed@1.0.0 
+  │ │ │ ├── is-stream@1.1.0 
+  │ │ │ ├── lowercase-keys@1.0.0 
+  │ │ │ ├── node-status-codes@1.0.0 
+  │ │ │ ├─┬ parse-json@2.2.0 
+  │ │ │ │ └─┬ error-ex@1.3.0 
+  │ │ │ │   └── is-arrayish@0.2.1 
+  │ │ │ ├─┬ pinkie-promise@2.0.1 
+  │ │ │ │ └── pinkie@2.0.4 
+  │ │ │ ├── timed-out@2.0.0 
+  │ │ │ ├── unzip-response@1.0.0 
+  │ │ │ └─┬ url-parse-lax@1.0.0 
+  │ │ │   └── prepend-http@1.0.4 
+  │ │ ├─┬ gulp-decompress@1.2.0 
+  │ │ │ ├─┬ archive-type@3.2.0 
+  │ │ │ │ └── file-type@3.8.0 
+  │ │ │ ├─┬ decompress@3.0.0 
+  │ │ │ │ ├─┬ buffer-to-vinyl@1.1.0 
+  │ │ │ │ │ └── uuid@2.0.2 
+  │ │ │ │ ├─┬ decompress-tar@3.1.0 
+  │ │ │ │ │ ├── is-tar@1.0.0 
+  │ │ │ │ │ ├── object-assign@2.1.1 
+  │ │ │ │ │ ├─┬ strip-dirs@1.1.1 
+  │ │ │ │ │ │ ├─┬ is-absolute@0.1.7 
+  │ │ │ │ │ │ │ └── is-relative@0.1.3 
+  │ │ │ │ │ │ ├── is-natural-number@2.1.1 
+  │ │ │ │ │ │ └── sum-up@1.0.3 
+  │ │ │ │ │ ├─┬ tar-stream@1.5.2 
+  │ │ │ │ │ │ ├─┬ bl@1.1.2 
+  │ │ │ │ │ │ │ └── readable-stream@2.0.6 
+  │ │ │ │ │ │ └── end-of-stream@1.1.0 
+  │ │ │ │ │ └─┬ vinyl@0.4.6 
+  │ │ │ │ │   └── clone@0.2.0 
+  │ │ │ │ ├─┬ decompress-tarbz2@3.1.0 
+  │ │ │ │ │ ├── is-bzip2@1.0.0 
+  │ │ │ │ │ ├── object-assign@2.1.1 
+  │ │ │ │ │ ├─┬ seek-bzip@1.0.5 
+  │ │ │ │ │ │ └─┬ commander@2.8.1 
+  │ │ │ │ │ │   └── graceful-readlink@1.0.1 
+  │ │ │ │ │ └─┬ vinyl@0.4.6 
+  │ │ │ │ │   └── clone@0.2.0 
+  │ │ │ │ ├─┬ decompress-targz@3.1.0 
+  │ │ │ │ │ ├── is-gzip@1.0.0 
+  │ │ │ │ │ ├── object-assign@2.1.1 
+  │ │ │ │ │ └─┬ vinyl@0.4.6 
+  │ │ │ │ │   └── clone@0.2.0 
+  │ │ │ │ ├─┬ decompress-unzip@3.4.0 
+  │ │ │ │ │ ├── is-zip@1.0.0 
+  │ │ │ │ │ ├── stat-mode@0.2.1 
+  │ │ │ │ │ ├─┬ through2@2.0.1 
+  │ │ │ │ │ │ └── readable-stream@2.0.6 
+  │ │ │ │ │ └─┬ yauzl@2.4.2 
+  │ │ │ │ │   └─┬ fd-slicer@1.0.1 
+  │ │ │ │ │     └── pend@1.2.0 
+  │ │ │ │ └── vinyl-assign@1.2.1 
+  │ │ │ └─┬ gulp-util@3.0.7 
+  │ │ │   ├── array-differ@1.0.0 
+  │ │ │   ├── beeper@1.1.0 
+  │ │ │   ├── dateformat@1.0.12 
+  │ │ │   ├─┬ fancy-log@1.2.0 
+  │ │ │   │ └── time-stamp@1.0.1 
+  │ │ │   ├─┬ gulplog@1.0.0 
+  │ │ │   │ └── glogg@1.0.0 
+  │ │ │   ├─┬ has-gulplog@0.1.0 
+  │ │ │   │ └── sparkles@1.0.0 
+  │ │ │   ├── lodash._reescape@3.0.0 
+  │ │ │   ├── lodash._reevaluate@3.0.0 
+  │ │ │   ├── lodash._reinterpolate@3.0.0 
+  │ │ │   ├─┬ lodash.template@3.6.2 
+  │ │ │   │ ├── lodash._basecopy@3.0.1 
+  │ │ │   │ ├── lodash._basetostring@3.0.1 
+  │ │ │   │ ├── lodash._basevalues@3.0.0 
+  │ │ │   │ ├── lodash._isiterateecall@3.0.9 
+  │ │ │   │ ├── lodash.escape@3.2.0 
+  │ │ │   │ ├─┬ lodash.keys@3.1.2 
+  │ │ │   │ │ ├── lodash._getnative@3.9.1 
+  │ │ │   │ │ ├── lodash.isarguments@3.0.8 
+  │ │ │   │ │ └── lodash.isarray@3.0.4 
+  │ │ │   │ ├── lodash.restparam@3.6.1 
+  │ │ │   │ └── lodash.templatesettings@3.1.1 
+  │ │ │   ├─┬ multipipe@0.1.2 
+  │ │ │   │ └─┬ duplexer2@0.0.2 
+  │ │ │   │   └─┬ readable-stream@1.1.14 
+  │ │ │   │     └── isarray@0.0.1 
+  │ │ │   ├── object-assign@3.0.0 
+  │ │ │   ├─┬ through2@2.0.1 
+  │ │ │   │ └── readable-stream@2.0.6 
+  │ │ │   └── vinyl@0.5.3 
+  │ │ ├── gulp-rename@1.2.2 
+  │ │ ├── is-url@1.2.1 
+  │ │ ├── object-assign@4.1.0 
+  │ │ ├── read-all-stream@3.1.0 
+  │ │ ├─┬ readable-stream@2.1.4 
+  │ │ │ ├── buffer-shims@1.0.0 
+  │ │ │ ├── core-util-is@1.0.2 
+  │ │ │ ├── isarray@1.0.0 
+  │ │ │ ├── process-nextick-args@1.0.7 
+  │ │ │ ├── string_decoder@0.10.31 
+  │ │ │ └── util-deprecate@1.0.2 
+  │ │ ├── stream-combiner2@1.1.1 
+  │ │ ├─┬ vinyl@1.1.1 
+  │ │ │ ├── clone@1.0.2 
+  │ │ │ ├── clone-stats@0.0.1 
+  │ │ │ └── replace-ext@0.0.1 
+  │ │ ├─┬ vinyl-fs@2.4.3 
+  │ │ │ ├─┬ duplexify@3.4.3 
+  │ │ │ │ └─┬ end-of-stream@1.0.0 
+  │ │ │ │   └─┬ once@1.3.3 
+  │ │ │ │     └── wrappy@1.0.2 
+  │ │ │ ├─┬ glob-stream@5.3.2 
+  │ │ │ │ ├── extend@3.0.0 
+  │ │ │ │ ├─┬ glob@5.0.15 
+  │ │ │ │ │ ├── inflight@1.0.5 
+  │ │ │ │ │ ├─┬ minimatch@3.0.0 
+  │ │ │ │ │ │ └─┬ brace-expansion@1.1.4 
+  │ │ │ │ │ │   ├── balanced-match@0.4.1 
+  │ │ │ │ │ │   └── concat-map@0.0.1 
+  │ │ │ │ │ └── path-is-absolute@1.0.0 
+  │ │ │ │ ├─┬ glob-parent@2.0.0 
+  │ │ │ │ │ └── is-glob@2.0.1 
+  │ │ │ │ ├─┬ micromatch@2.3.8 
+  │ │ │ │ │ ├─┬ arr-diff@2.0.0 
+  │ │ │ │ │ │ └── arr-flatten@1.0.1 
+  │ │ │ │ │ ├── array-unique@0.2.1 
+  │ │ │ │ │ ├─┬ braces@1.8.4 
+  │ │ │ │ │ │ ├─┬ expand-range@1.8.2 
+  │ │ │ │ │ │ │ └─┬ fill-range@2.2.3 
+  │ │ │ │ │ │ │   ├── is-number@2.1.0 
+  │ │ │ │ │ │ │   ├── isobject@2.1.0 
+  │ │ │ │ │ │ │   ├── randomatic@1.1.5 
+  │ │ │ │ │ │ │   └── repeat-string@1.5.4 
+  │ │ │ │ │ │ ├── preserve@0.2.0 
+  │ │ │ │ │ │ └── repeat-element@1.1.2 
+  │ │ │ │ │ ├─┬ expand-brackets@0.1.5 
+  │ │ │ │ │ │ └── is-posix-bracket@0.1.1 
+  │ │ │ │ │ ├── extglob@0.3.2 
+  │ │ │ │ │ ├── filename-regex@2.0.0 
+  │ │ │ │ │ ├── is-extglob@1.0.0 
+  │ │ │ │ │ ├─┬ kind-of@3.0.3 
+  │ │ │ │ │ │ └── is-buffer@1.1.3 
+  │ │ │ │ │ ├── normalize-path@2.0.1 
+  │ │ │ │ │ ├─┬ object.omit@2.0.0 
+  │ │ │ │ │ │ ├─┬ for-own@0.1.4 
+  │ │ │ │ │ │ │ └── for-in@0.1.5 
+  │ │ │ │ │ │ └── is-extendable@0.1.1 
+  │ │ │ │ │ ├─┬ parse-glob@3.0.4 
+  │ │ │ │ │ │ ├── glob-base@0.3.0 
+  │ │ │ │ │ │ └── is-dotfile@1.0.2 
+  │ │ │ │ │ └─┬ regex-cache@0.4.3 
+  │ │ │ │ │   ├── is-equal-shallow@0.1.3 
+  │ │ │ │ │   └── is-primitive@2.0.0 
+  │ │ │ │ ├── ordered-read-streams@0.3.0 
+  │ │ │ │ ├─┬ through2@0.6.5 
+  │ │ │ │ │ └─┬ readable-stream@1.0.34 
+  │ │ │ │ │   └── isarray@0.0.1 
+  │ │ │ │ ├─┬ to-absolute-glob@0.1.1 
+  │ │ │ │ │ └── extend-shallow@2.0.1 
+  │ │ │ │ └─┬ unique-stream@2.2.1 
+  │ │ │ │   └─┬ json-stable-stringify@1.0.1 
+  │ │ │ │     └── jsonify@0.0.0 
+  │ │ │ ├── graceful-fs@4.1.4 
+  │ │ │ ├─┬ gulp-sourcemaps@1.6.0 
+  │ │ │ │ ├── convert-source-map@1.2.0 
+  │ │ │ │ └─┬ through2@2.0.1 
+  │ │ │ │   └── readable-stream@2.0.6 
+  │ │ │ ├── is-valid-glob@0.3.0 
+  │ │ │ ├── lazystream@1.0.0 
+  │ │ │ ├─┬ lodash.isequal@4.2.0 
+  │ │ │ │ ├── lodash._root@3.0.1 
+  │ │ │ │ └── lodash.keys@4.0.7 
+  │ │ │ ├── merge-stream@1.0.0 
+  │ │ │ ├─┬ mkdirp@0.5.1 
+  │ │ │ │ └── minimist@0.0.8 
+  │ │ │ ├─┬ strip-bom@2.0.0 
+  │ │ │ │ └── is-utf8@0.2.1 
+  │ │ │ ├─┬ strip-bom-stream@1.0.0 
+  │ │ │ │ └── first-chunk-stream@1.0.0 
+  │ │ │ ├─┬ through2@2.0.1 
+  │ │ │ │ └── readable-stream@2.0.6 
+  │ │ │ ├─┬ through2-filter@2.0.0 
+  │ │ │ │ ├─┬ through2@2.0.1 
+  │ │ │ │ │ └── readable-stream@2.0.6 
+  │ │ │ │ └── xtend@4.0.1 
+  │ │ │ └── vali-date@1.0.0 
+  │ │ └─┬ ware@1.3.0 
+  │ │   └─┬ wrap-fn@0.1.5 
+  │ │     └── co@3.1.0 
+  │ ├─┬ each-async@1.1.1 
+  │ │ ├── onetime@1.1.0 
+  │ │ └── set-immediate-shim@1.0.1 
+  │ ├── lazy-req@1.1.0 
+  │ └── os-filter-obj@1.0.3 
+  └─┬ logalot@2.1.0 
+    ├─┬ figures@1.7.0 
+    │ └── escape-string-regexp@1.0.5 
+    └─┬ squeak@1.3.0 
+      ├─┬ chalk@1.1.3 
+      │ ├── ansi-styles@2.2.1 
+      │ ├─┬ has-ansi@2.0.0 
+      │ │ └── ansi-regex@2.0.0 
+      │ ├── strip-ansi@3.0.1 
+      │ └── supports-color@2.0.0 
+      ├── console-stream@0.1.1 
+      └─┬ lpad-align@1.1.0 
+        ├── get-stdin@4.0.1 
+        ├── longest@1.0.1 
+        └── lpad@2.0.1 
+
+Running "force:eslint" (force) task
+
+Running "force-internal:pre:eslint" (force-internal) task
+>> Enable force mode for task eslint.
+
+Running "eslint:dist" (eslint) task
+
+/var/www/fbctf/src/static/js/plugins.js
+  51:9  error  Move function declaration to function body root  no-inner-declarations
+
+✖ 1 problem (1 error, 0 warnings)
+
+Warning: Task "eslint:dist" failed. Used --force, continuing.
+
+Running "force-internal:post:eslint" (force-internal) task
+>> Reset force mode for task eslint.
+
+Running "run:flow" (run) task
+flow is still initializing; this can take some time. [processing] -Launching Flow server for /var/www/fbctf/src
+Spawned flow server (child pid=23348)
+Logs will go to /tmp/flow/zSvarzSwwwzSfbctfzSsrc.log
+Started a new flow server: \No errors!
+
+Running "browserify:dist" (browserify) task
+>> Bundle src/static/build/app-browserify.js created.
+
+Running "copy:browserify" (copy) task
+Copied 1 file
+
+Running "sass:dist" (sass) task
+
+Done, but with warnings.
+[+] nginx is already installed. skipping.
+[+] Deploying certificates
+ -> SSL Certificate file location? 
+ -> SSL Key Certificate file location? 
+cp: cannot stat '': No such file or directory
+cp: cannot stat '': No such file or directory
+Generating DH parameters, 2048 bit long safe prime, generator 2
+This is going to take a long time
+..................................................................+.............................................................+..+...........................+............................................................................................+.......+.....+.....................................+.............+....................................................................+..+..............................................................................................................+........................................+.......................+.+...............................................................................................................................................................+...................................................................+...................................................................................................................................................+.......................................................................+.............................................................................................................................................+...................................................................................................................+.......................................++*++*
+# Do not send nginx version number in error pages or server header
+server_tokens off;
+
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self'; frame-src 'self'; object-src 'none'";
+
+server {
+  listen 80;
+  rewrite ^ https://$host$request_uri? permanent;
+}
+
+server {
+  listen 443;
+
+  ssl on;
+  ssl_certificate /etc/nginx/certs/fbctf.csr;
+  ssl_certificate_key /etc/nginx/certs/fbctf.key;
+
+  ssl_prefer_server_ciphers on;
+  ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+
+  ssl_dhparam /etc/nginx/certs/dhparam.pem;
+
+  ssl_session_cache shared:SSL:10m;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_stapling on;
+  ssl_stapling_verify on;
+  resolver 8.8.8.8 8.8.4.4 valid=300s;
+  resolver_timeout 5s;
+
+  add_header X-Frame-Options DENY;
+  add_header X-Content-Type-Options nosniff;
+  add_header Strict-Transport-Security "max-age=31536000; includeSubdomains;";
+  
+  add_header Cache-Control "no-cache, no-store";
+  add_header Pragma "no-cache";
+  expires -1;
+
+  root /var/www/fbctf/src;
+  index index.php;
+  location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_pass  127.0.0.1:9000;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
+  }
+  error_page 400 401 402 403 404 500 /error.php;
+  client_max_body_size 25M;
+}
+nginx: [warn] "ssl_stapling" ignored, issuer certificate not found
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[+] Installing Unison 2.48.3
+xz: (stdin): File format not recognized
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+[+] Remember install the same version of unison (2.48.3) in your host machine
+[+] Creating DB - fbctf
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[+] Importing schema...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[+] Importing countries...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[+] Importing logos...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[+] Creating user...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[+] DB Connection file
+[+] Adding default admin user
+[+] The password for admin is: 
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 1364 (HY000) at line 1: Field 'points' doesn't have a default value
+[+] fbctf deployment is complete! Ready in https://10.10.10.5
